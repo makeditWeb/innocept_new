@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../cmn/reset.css">
+    <link rel="stylesheet" href="../cmn/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body >
+
+    <div class="landing-page">    
+        <div class="loading-screen">
+        </div>
+        <div class="logo">
+            <img src="../images/logo.png" alt="logo" />
+        </div>
+    </div>
+
+
+   
+   
+    <div class="main">
+     <!-- navbar -->
+     
+     <nav class="navbar">
+        <div class="nav_logo">
+            <a href="./main.html">
+                <img src="../images/logo.png" alt="logo">
+            </a>
+        </div>
+        <ul class="navbar_wrap">
+            <li class="navbar_item"><a href="./main.html">info@innocept.co.kr</a></li>
+            <li class="navbar_item"><a href="./company.html">COMPANY</a></li>
+            <li class="navbar_item"><a href="./work.html">WORK</a></li>
+            <li class="navbar_item"><a href="./contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+
+        <div class="main_content">
+            <h2>WE CREATE</h2>
+            <h2>ONE SPACE INTO</h2>
+            <h2>ONE MILLION</h2>
+            <h2>MASTERPIECES</h2>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="../js/main.js"></script>
+
+    <script>
+window.onload = function() {
+  document.querySelector('.logo').style.display = 'block';
+  setTimeout(function() {
+    document.querySelector('.loading-screen').style.display = 'none';
+    document.querySelector('.logo').style.display = 'none';
+    document.querySelector('.navbar').style.display = 'flex';
+    document.querySelector('.main').style.display = 'block'; // 메인 화면 보이도록 설정
+  }, 4000); // 3초 후에 loading screen 제거
+}
+      </script>
+</body>
+</html>

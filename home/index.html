@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../cmn/reset.css">
+    <link rel="stylesheet" href="../cmn/style.css">
+    <link rel="stylesheet" href="../cmn/leding.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="landing-page">
+		<div class="landing-page__bg"></div>
+		<div class="landing-page__content">
+			<img src="../images/logo.png" alt="logo">
+		</div>
+	</div>
+
+
+
+
+
+    <script src="../js/main.js"></script>
+
+    <script>
+        window.addEventListener("load", function() {
+	setTimeout(function() {
+		document.querySelector(".landing-page").classList.add("hide");
+	}, 2000);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+	document.querySelector(".landing-page").classList.remove("hide");
+});
+    </script>
+</body>
+</html>
