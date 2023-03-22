@@ -15,7 +15,9 @@
     url('../font/nexa-light.woff') format('woff');
 }
 
-
+html,body{
+    height: 100vh;
+}
 body {
     margin: 0;
     padding: 0;
@@ -56,6 +58,12 @@ body {
     font-size: 50px;
     font-weight: bold;
     z-index: 999;
+    width: 600px;
+    height: auto;
+}
+
+.logo img{
+    width: 100%;
 }
 
 
@@ -129,8 +137,30 @@ nav{
     padding-left: 78px;
 }
 
+.main_content{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.main_content .line {
+    width: 100%;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+}
+
 .main_content h2{
     font-family: 'NexaBold',sans-serif;
     font-size: 173.34px;
+    line-height:220px;
     color: #fff;
+    position: absolute;
 }
+
+
