@@ -5,7 +5,7 @@
     tl.from(".line h2", 1, {
         y: 200,
         ease: "power4.out",
-        delay: 3.8,
+        delay: 3,
         skewY: 7,
         stagger: {
             amount: 0.3
