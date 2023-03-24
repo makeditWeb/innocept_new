@@ -1,27 +1,27 @@
-
-
 @font-face {
     font-family: 'NexaBold';
     src: url('../font/nexa-bold.otf') format('otf'),
-    url('../font/nexa-bold.ttf') format('ttf'),
-    url('../font/nexa-bold.woff') format('woff');
+        url('../font/nexa-bold.ttf') format('ttf'),
+        url('../font/nexa-bold.woff') format('woff');
 }
 
 
 @font-face {
     font-family: 'NexaLight';
     src: url('../font/nexa-light.otf') format('otf'),
-    url('../font/nexa-bold.ttf') format('ttf'),
-    url('../font/nexa-light.woff') format('woff');
+        url('../font/nexa-bold.ttf') format('ttf'),
+        url('../font/nexa-light.woff') format('woff');
 }
 
 @font-face {
     font-family: 'HighSummit';
-    src: url('../font/HighSummit.otf') format('otf'),
-    url('../font/HighSummit.ttf') format('ttf'),
+    src: url('../font/High Summit.otf') format('otf'),
+        url('../font/High Summit.ttf') format('ttf'),
+        url('../font/High-Summit.woff') format('woff');
 }
 
-html,body{
+html,
+body {
     height: 100vh;
 }
 
@@ -29,6 +29,15 @@ body {
     margin: 0;
     padding: 0;
     background-color: #000;
+}
+
+.section {
+    height: 972px;
+    position: relative;
+}
+
+.bg-white{
+    background-color: #fff;
 }
 
 .loading-screen {
@@ -69,7 +78,7 @@ body {
     height: auto;
 }
 
-.logo img{
+.logo img {
     width: 100%;
 }
 
@@ -77,20 +86,19 @@ body {
 /* navbar */
 
 
-nav{
-    display: none;
+nav {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 50px 70px;
-    background-color:#000;
+    background-color: #000;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    display: none;
-    color:#fff;
+    color: #fff;
     z-index: 1;
     height: 150px;
 }
@@ -99,30 +107,30 @@ nav{
     opacity: 1;
 }
 
-.nav_logo{
+.nav_logo {
     width: 239px;
     height: 50px;
 }
 
-.nav_logo img{
+.nav_logo img {
     width: 100%;
 }
 
-.navbar_wrap{
+.navbar_wrap {
     display: flex;
     align-items: center;
 }
 
-.navbar .navbar_item{
+.navbar .navbar_item {
     margin-right: 52px;
 }
 
-.navbar .navbar_item:last-child{
+.navbar .navbar_item:last-child {
     margin-right: 0;
 }
 
 
-.navbar .navbar_item a{
+.navbar .navbar_item a {
     font-family: 'NexaLight', sans-serif;
     color: #fff;
     display: block;
@@ -130,35 +138,35 @@ nav{
 }
 
 .main_navbar {
-    display:flex;
+    display: flex;
 }
 
 /* main */
 
-.main_top{
+.main_top {
     height: 100vh;
     position: relative;
 }
 
 
-.main{
+.main {
     width: 100%;
     background-color: #000;
     position: relative;
-    display: none;
+    /* display: none; */
 }
 
 
 
-.main_top_content{
+.main_top_content {
     padding-left: 78px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: absolute;
-    top: 50%;
-    transform: translate(0,-50%);
+    top: 51%;
+    transform: translate(0, -50%);
 }
 
 .main_top_content .line {
@@ -168,10 +176,10 @@ nav{
     overflow: hidden;
 }
 
-.main_top_content h2{
-    font-family: 'NexaBold',sans-serif;
+.main_top_content h2 {
+    font-family: 'NexaBold', sans-serif;
     font-size: 173.34px;
-    line-height:220px;
+    line-height: 220px;
     color: #fff;
     position: absolute;
 }
@@ -187,7 +195,7 @@ nav{
 @keyframes move-up {
     0% {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(80px);
         /* 50px 만큼 아래로 이동 */
     }
 
@@ -205,24 +213,22 @@ nav{
     position: relative;
 }
 
-.marquee {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-}
 
-.track {
+.flow_banner,
+.flow_banner1 {
     overflow: hidden;
     display: flex;
     max-width: 100%;
 }
 
-.motion_wrap {
+
+.flow_banner .list,
+.flow_banner1 .list1 {
     display: flex;
-    align-items: center;
 }
 
-.marquee li {
+
+.flow_banner .list li {
     font-size: 226px;
     font-weight: bold;
     letter-spacing: -4.52px;
@@ -230,36 +236,164 @@ nav{
     color: #010101;
 }
 
-.marquee .text-stroke {
-    color: #fff;
+.list .text-stroke {
+    color: #fff !important;
 }
+
 
 @keyframes flowRolling {
     0% {
         transform: translateX(0);
     }
-    100% {
-        transform: translateX(-100%);
-    }
-}
 
-@keyframes flowRolling1 {
-    0% {
-        transform: translateX(-100%);
-    }
     100% {
-        transform: translateX(0);
+        transform: translateX(-100%);
     }
 }
 
 /* 반응형 스타일 */
 @media (max-width: 1280px) {
-    .flow_banner .list > li {font-size: 16px;padding: 10px;}
+    .flow_banner .list>li {
+        font-size: 16px;
+        padding: 10px;
+    }
 }
 
 @media (max-width: 767px) {
-    .flow_banner .list > li {font-size: 14px;padding: 5px;}
+    .flow_banner .list>li {
+        font-size: 14px;
+        padding: 5px;
+    }
 }
+
+
+.motion_content {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+
+
+/* work-navbar */
+
+.height_max{
+    height: 972px;
+    position: relative;
+}
+
+.center-slider{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.center-slider .slick-slide {
+    color: #FFF;
+    height: 651px;
+    margin: 0 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.8);
+    transition: all 0.4s ease-in-out;
+
+}
+
+.center-slider .slick-slide,
+.center-slider .slick-slide[aria-hidden="true"]:not(.slick-cloned)~.slick-cloned[aria-hidden="true"] {
+    transform: scale(0.8, 0.8);
+    transition: all 0.4s ease-in-out;
+}
+
+/* Active center slide (You can change anything here for cenetr slide)*/
+.center-slider .slick-center,
+.center-slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"])+.slick-cloned[aria-hidden="true"] {
+    transform: scale(1.1);
+    background-color: #000000;
+}
+
+.center-slider .slick-current.slick-active {
+    transform: scale(1.1);
+    background-color: #000000;
+
+}
+
+.slick-slide img{
+    filter: blur(5px);
+}
+
+.center-slider .slick-current.slick-active img{
+    filter: none;
+    -webkit-filter: none;
+}
+
+
+
+.slick-next,
+.slick-prev {
+    z-index: 5;
+}
+
+.slick-next {
+    right: 15px;
+}
+
+.slick-prev {
+    left: 15px;
+}
+
+.slick-next:before,
+.slick-prev:before {
+    color: #000;
+    font-size: 26px;
+}
+
+
+.navbar_slide_content{
+    width: 650px;
+    height: 650px;
+}
+
+.navbar_slide_content img{
+    width: 100%;
+}
+
+
+.work_category{
+    font-family:'HighSummit';
+    font-size: 151.5px;
+    letter-spacing: -3.03px;
+    color: #fff;
+    display: none;
+}
+
+
+.slick-current.slick-active .work_category{
+    display: block;
+}
+
+
+.partners li{
+    -webkit-text-stroke: 2px #000;
+    font-family: Nexa;
+    font-size: 226px;
+    font-weight: bold;
+    letter-spacing: -4.52px;
+    color: #fff;
+}
+
+.partners .text-color{
+    color: #000;
+}
+
+.flow_banner1{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+
+
 
 /* WORK */
 
@@ -269,28 +403,28 @@ nav{
     top:50%;
     transform:translate(0,-50%);
     padding-left:78px; */
-    padding : 181px 0px 51px 78px;
+    padding: 181px 0px 51px 78px;
 }
 
 
 .work_content .work_content-wrap {
-    display:flex;
+    display: flex;
 }
 
-.work_content .work_content-wrap .work_content-list{
+.work_content .work_content-wrap .work_content-list {
     font-family: 'NexaLight', sans-serif;
     color: #fffefe;
     display: block;
-    font-size:25px;
-    padding:0px 20px 0px 0px;
+    font-size: 25px;
+    padding: 0px 20px 0px 0px;
 }
 
 .work_content .work_content-wrap .work_content-list::after {
-    content:"";
+    content: "";
     display: inline-block;
     border: 1px solid #fffefe;
-    height:19px;
-    margin-left:20px;
+    height: 19px;
+    margin-left: 20px;
 }
 
 .work_content .work_content-wrap .work_content-list:nth-last-child(1) {
@@ -315,9 +449,9 @@ nav{
 }
 
 .work_content_boxBg .work_content_box-wrap .work_content_box .box {
-    width:601px;
-    height:601px;
-    background-color:#d3d3d3;
+    width: 601px;
+    height: 601px;
+    background-color: #d3d3d3;
 }
 
 .work_content_boxBg .work_content_box-wrap .work_content_box .text {

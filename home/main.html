@@ -9,24 +9,25 @@
 
     <link rel="stylesheet" href="../cmn/reset.css">
     <link rel="stylesheet" href="../cmn/style.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
     <link rel="icon" href="../images/logo.png">
     <!-- <link rel="stylesheet" href="../cmn/jquery.fullPage.css"> -->
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- <script src="../js/jquery.fullPage.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- slick js -->
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
 
-    <div class="landing-page">
+    <!-- <div class="landing-page">
         <div class="loading-screen">
         </div>
         <div class="logo">
             <img src="../images/logo.png" alt="logo" />
         </div>
-    </div>
+    </div> -->
 
     <main id="fullpage" class="main">
         <nav class="navbar">
@@ -66,16 +67,50 @@
         <section class="section bg-black">
             <div class="motion_content">
                 <div class="marquee">
-                    <div class="track">
-                        <ul class="motion_wrap">
+                    <div class="flow_banner">
+                        <ul class="list">
                             <li>WORK</li>
                             <li class="text-stroke">WORK</li>
                             <li>WORK</li>
+                            <li class="text-stroke">WORK</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
+        </section>
+
+        <section class="work_navbar height_max">
+            <div class="center-slider">
+                <div class="navbar_slide_content">
+                    <img src="../images/slide_img1.jpg" alt="slide">
+                    <div class="work_category">exhibition</div>
+                </div>
+                <div class="navbar_slide_content">
+                    <img src="../images/slide_img1.jpg" alt="slide">
+                    <div class="work_category">exhibition</div>
+                </div>
+                <div class="navbar_slide_content">
+                    <img src="../images/slide_img1.jpg" alt="slide">
+                    <div class="work_category">exhibition</div>
+                </div>
+                <div class="navbar_slide_content">
+                    <img src="../images/slide_img1.jpg" alt="slide">
+                    <div class="work_category">exhibition</div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="partners bg-white height_max">
+            <div class="flow_banner1">
+                <ul class="list1">
+                    <li>PARTNERS</li>
+                    <li class="text-color">PARTNERS</li>
+                    <li>PARTNERS</li>
+                    <li class="text-color">PARTNERS</li>
+                </ul>
+            </div>
         </section>
     </main>
 
@@ -83,44 +118,40 @@
 
 
 
-    <!-- <script src="../js/gsap.js"></script> -->
+
+
+
+
+
     <script src="../js/main.js"></script>
-
-
-
-
     <script>
-        window.onload = function () {
-            document.querySelector('.logo').style.display = 'block';
-            setTimeout(function () {
-                document.querySelector('.loading-screen').style.display = 'none';
-                document.querySelector('.logo').style.display = 'none';
-                document.querySelector('.navbar').style.display = 'flex';
-                document.querySelector('.main').style.display = 'block'; // 메인 화면 보이도록 설정
-            }, 4000); // 3초 후에 loading screen 제거
-        }
+        // window.onload = function () {
+        //     document.querySelector('.logo').style.display = 'block';
+        //     setTimeout(function () {
+        //         document.querySelector('.loading-screen').style.display = 'none';
+        //         document.querySelector('.logo').style.display = 'none';
+        //         document.querySelector('.navbar').style.display = 'flex';
+        //         document.querySelector('.main').style.display = 'block'; // 메인 화면 보이도록 설정
+        //     }, 4000); // 3초 후에 loading screen 제거
+        // }
 
 
-
-
-
-    // // 메인섹션 텍스트 애니메이션
-    // const tl = gsap.timeline();
-
-    // tl.from(".line h2", 1, {
-    //     y: 200,
-    //     ease: "power4.out",
-    //     delay: 3,
-    //     skewY: 7,
-    //     stagger: {
-    //         amount: 0.3
-    //     }
-    // })
-
-
-
-
+        $(document).ready(function(){
+      $('.center-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: true,
+        arrows: false,
+        dots: false,
+        speed: 300,
+        centerPadding: '30px',
+        infinite: true,
+        autoplaySpeed: 5000,
+        autoplay: true
+      });
+    });
     </script>
+
 
 
 </body>
