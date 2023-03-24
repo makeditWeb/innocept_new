@@ -491,3 +491,77 @@ footer p{
     display: block;
     padding:101px 0px 56px 0px;
 }
+
+.contact_s01 {
+    padding: 467px 68px 0px 68px;
+}
+
+.contact_s01 .text_box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_s01 .text_box h1 {
+    font-family: 'NexaBold', sans-serif;
+    color: #fffefe;
+    font-size:117px;
+    letter-spacing: -2.34px;
+}
+
+.contact_s01 p {
+    font-family: 'NexaLight', sans-serif;
+    color: #fff;
+    font-size:19.5px;
+    line-height: 25px;
+    text-align: right;
+}
+
+.contact_s01 .text_wrap {
+    padding : 79px 0px 71px 0px;
+}
+
+.contact_s01 .text_wrap li {
+    font-family: 'NexaLight', sans-serif;
+    color: #fff;
+    font-size:90.5px;
+    line-height: 99.5px;
+    display: block;
+    letter-spacing: -1.81px;
+}
+
+.contact_s02 {
+    padding: 124px 0px 75px 118px;
+}
+
+.contact_s02 form .contact {
+    font-family: 'NexaLight', sans-serif;
+    color: #fff;
+    font-size:29.5px;
+    line-height: 49px;
+}
+
+.contact_s02 form .contact ul li input {
+    font-family: 'NexaLight', sans-serif;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    /* text-align: right; */
+    width: 100%;
+    font-size: 29.5px;
+    line-height: 49px;
+    color:#5a5a5a;
+}
+
+.contact_s02 form .btn button {
+    cursor: pointer;
+    border:none;
+    background-color:transparent;
+    outline: none;
+}
+
+.contact_s02 form .btn button p {
+    font-family: 'NexaBold', sans-serif;
+    color: #fff;
+    font-size:46.5px;
+    line-height: 49px;
+}
