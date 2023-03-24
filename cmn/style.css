@@ -77,7 +77,6 @@ nav{
     top: 0;
     left: 0;
     width: 100%;
-    /* height: 145px; */
     padding: 50px 70px;
     background-color:#000;
     display: flex;
@@ -86,7 +85,8 @@ nav{
     box-sizing: border-box;
     display: none;
     color:#fff;
-        z-index: 1;
+    z-index: 1;
+    height: 150px;
 }
 
 .navbar.show {
@@ -127,12 +127,12 @@ nav{
 
 .main_top{
     height: 100vh;
+    position: relative;
 }
 
 
 .main{
     width: 100%;
-
     background-color: #000;
     position: relative;
     display: none;
@@ -140,25 +140,25 @@ nav{
 
 
 
-.main_content{
+.main_top_content{
     padding-left: 78px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: absolute;
-    top: 40%;
+    top: 50%;
     transform: translate(0,-50%);
 }
 
-.main_content .line {
+.main_top_content .line {
     width: 100%;
     height: 180px;
     position: relative;
     overflow: hidden;
 }
 
-.main_content h2{
+.main_top_content h2{
     font-family: 'NexaBold',sans-serif;
     font-size: 173.34px;
     line-height:220px;
@@ -166,37 +166,87 @@ nav{
     position: absolute;
 }
 
+.main_top_content h2 {
+    opacity: 0;
+    /* h2 요소를 숨김 */
+    animation: move-up 1s ease-in-out forwards;
+    /* 애니메이션 설정 */
+}
+
+/* @keyframes 규칙 정의 */
+@keyframes move-up {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+        /* 50px 만큼 아래로 이동 */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* 원래 위치로 이동 */
+    }
+}
+
 
 /* main_sub */
 
-.main_sub{
+.main_sub {
     position: relative;
 }
 
-.marquee{
+.marquee {
     display: flex;
-    overflow: hidden;
     width: 100vw;
     height: 100vh;
-    gap: 1rem;
 }
 
+.track {
+    overflow: hidden;
+    display: flex;
+    max-width: 100%;
+}
 
-
-.motion_wrap{
+.motion_wrap {
     display: flex;
     align-items: center;
 }
 
-
-.marquee h2{
+.marquee li {
     font-size: 226px;
     font-weight: bold;
     letter-spacing: -4.52px;
-        -webkit-text-stroke: 2px #fff;
+    -webkit-text-stroke: 2px #fff;
     color: #010101;
 }
 
-.marquee .text-storke{
+.marquee .text-stroke {
     color: #fff;
+}
+
+@keyframes flowRolling {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes flowRolling1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1280px) {
+    .flow_banner .list > li {font-size: 16px;padding: 10px;}
+}
+
+@media (max-width: 767px) {
+    .flow_banner .list > li {font-size: 14px;padding: 5px;}
 }
