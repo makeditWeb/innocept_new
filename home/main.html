@@ -9,14 +9,16 @@
 
     <link rel="stylesheet" href="../cmn/reset.css">
     <link rel="stylesheet" href="../cmn/style.css">
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="../cmn/jquery.fullPage.css">
 
     <link rel="icon" href="../images/logo.png">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
-    <!-- slick js -->
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    
+
+
+    
 </head>
 
 <body>
@@ -29,11 +31,12 @@
         </div>
     </div> -->
 
-    <main id="fullpage" class="main">
+    <div id="fullpage" class="main wrapper">
         <nav class="navbar">
             <div class="nav_logo">
                 <a href="./main.html">
-                    <img src="../images/logo.png" alt="logo">
+                    <img src="../images/logo.png" alt="logo" class="white_logo">
+                    <img src="../images/logo_black.png" alt="logo" class="black_logo">
                 </a>
             </div>
             <ul class="navbar_wrap">
@@ -46,7 +49,7 @@
 
 
 
-        <section class="main_top bg-black">
+        <section class="section main_top bg-black"  data-page="1">
             <!-- navbar -->
             <div class="main_top_content">
                 <div class="line">
@@ -64,7 +67,7 @@
             </div>
         </section>
 
-        <section class="height_max bg-black ">
+        <section class="section height_max bg-black " data-page="2">
             <div class="motion_content">
                 <div class="marquee">
                     <div class="flow_banner">
@@ -80,32 +83,40 @@
 
         </section>
 
-        <section id="work" class="work_navbar height_max ">
+        <section id="work" class="section bg-black height_max " data-page="3">
             <div class="center-slider">
                 <div class="navbar_slide_content">
-                    <img src="../images/slide_img1.jpg" alt="slide">
-                    <div class="work_category">exhibition</div>
+                    <a href="../home/work.html">
+                        <img src="../images/slide_img1.jpg" alt="slide">
+                        <div class="work_category">exhibition</div>
+                    </a>
                 </div>
                 <div class="navbar_slide_content">
-                    <img src="../images/slide_img1.jpg" alt="slide">
-                    <div class="work_category">exhibition</div>
+                    <a href="../home/work.html">
+                        <img src="../images/slide_img1.jpg" alt="slide">
+                        <div class="work_category">exhibition</div>
+                    </a>
                 </div>
                 <div class="navbar_slide_content">
-                    <img src="../images/slide_img1.jpg" alt="slide">
-                    <div class="work_category">exhibition</div>
+                    <a href="../home/work.html">
+                        <img src="../images/slide_img1.jpg" alt="slide">
+                        <div class="work_category">exhibition</div>
+                    </a>
                 </div>
                 <div class="navbar_slide_content">
-                    <img src="../images/slide_img1.jpg" alt="slide">
-                    <div class="work_category">exhibition</div>
+                    <a href="../home/work.html">
+                        <img src="../images/slide_img1.jpg" alt="slide">
+                        <div class="work_category">exhibition</div>
+                    </a>
                 </div>
             </div>
         </section>
 
 
-        <section class="partners bg-white height_max">
+        <section class="section partners bg-white height_max " data-page="4">
             <div class="wrapp_inner">
                 <div class="flow_banner">
-                    <ul class="list partners_list">
+                    <ul class="list partners_list motion_rigth">
                         <li>PARTNERS</li>
                         <li class="text-color">PARTNERS</li>
                         <li>PARTNERS</li>
@@ -115,7 +126,7 @@
             </div>
         </section>
 
-        <section class="partners_logo bg-white height_max">
+        <section class="section partners_logo bg-white height_max"  data-page="5">
             <div class="partners_wrap">
                 <div class="partners_title">
                     PARTNERS
@@ -209,7 +220,7 @@
             </div>
         </section>
 
-        <section class="footer height_max">
+        <section class="section footer bg-black height_max" data-page="6">
             <div class="wrapp_inner">
                 <div class="flow_banner">
                     <ul class="list">
@@ -234,7 +245,7 @@
         </section>
 
 
-    </main>
+    </div>
 
 
 
@@ -242,11 +253,19 @@
 
 
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/jquery.fullPage.js" defer></script>
 
 
+
+    <!-- slick js -->
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   
     <script src="../js/main.js"></script>
 
     <script>
+// scroll section 
+
 
 
 
@@ -261,20 +280,20 @@
         // }
 
 
-        $(document).ready(function(){
-      $('.center-slider').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        centerMode: true,
-        arrows: false,
-        dots: false,
-        speed: 300,
-        centerPadding: '30px',
-        infinite: true,
-        autoplaySpeed: 5000,
-        autoplay: true
-      });
-    });
+        $(document).ready(function () {
+            $('.center-slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerMode: true,
+                arrows: false,
+                dots: false,
+                speed: 300,
+                centerPadding: '30px',
+                infinite: true,
+                autoplaySpeed: 5000,
+                autoplay: true
+            });
+        });
     </script>
 
 

@@ -31,15 +31,30 @@ body {
     overflow-x: hidden;
 }
 
+section {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+
+.height_max {
+    height: 972px;
+    position: relative;
+}
+
+
+
 body::-webkit-scrollbar {
     display: none;
-  }
-  
-  body {
-    -ms-overflow-style: none; /* 인터넷 익스플로러 */
-    scrollbar-width: none; /* 파이어폭스 */
-  }
-  
+}
+
+body {
+    -ms-overflow-style: none;
+    /* 인터넷 익스플로러 */
+    scrollbar-width: none;
+    /* 파이어폭스 */
+}
+
 
 body {
     margin: 0;
@@ -47,19 +62,15 @@ body {
     background-color: #000;
 }
 
-.wrapp_inner{
+.wrapp_inner {
     position: absolute;
     top: 50%;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
 }
 
-.work-list {
-    height: 972px;
-    position: relative;
 
-}
 
-.bg-white{
+.bg-white {
     background-color: #fff;
 }
 
@@ -88,7 +99,6 @@ body {
 }
 
 .logo {
-    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -123,6 +133,8 @@ nav {
     color: #fff;
     z-index: 1;
     height: 150px;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .navbar.show {
@@ -164,6 +176,56 @@ nav {
     display: flex;
 }
 
+/* White Logo */
+
+
+.bg-white .black_logo {
+    display: block;
+}
+
+.bg-white .white_logo {
+    display: none;
+}
+
+/* Black Logo */
+.black_logo {
+    display: none;
+}
+
+.bg-black .white_logo {
+    display: block;
+}
+
+.bg-black .black_logo {
+    display: none;
+}
+
+.navbar.bg-white {
+    color: #000;
+}
+
+.navbar.bg-white a{
+    color: #000;
+}
+
+
+
+.navbar-bg-white {
+    color: #000;
+  }
+  
+  .navbar-bg-black {
+    color: #fff;
+  }
+
+/* .navbar.black .navbar_item{
+    color: black;
+  }
+
+  .navbar.black .navbar_item a{
+    color: black;
+  } */
+
 /* ======================================main============================*/
 .main_top {
     height: 100vh;
@@ -187,7 +249,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     position: absolute;
-    top: 51%;
+    top: 57%;
     transform: translate(0, -50%);
 }
 
@@ -200,8 +262,8 @@ nav {
 
 .main_top_content h2 {
     font-family: 'NexaBold', sans-serif;
-    font-size: 12vw;
-    line-height: 12.139vw;
+    font-size: 11vw;
+    line-height: 10.139vw;
     color: #fff;
     position: absolute;
 }
@@ -278,6 +340,7 @@ nav {
     0% {
         transform: translateX(-100%);
     }
+
     100% {
         transform: translateX(0);
     }
@@ -295,12 +358,11 @@ nav {
 
 /* work-navbar */
 
-.height_max{
-    height: 972px;
-    position: relative;
+.fp-tableCell{
+    vertical-align: top!important;
 }
 
-.center-slider{
+.center-slider {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
@@ -308,7 +370,7 @@ nav {
 
 .center-slider .slick-slide {
     color: #FFF;
-    height: 651px;
+    height:700px;
     margin: 0 15px 0 0;
     display: flex;
     align-items: center;
@@ -337,11 +399,11 @@ nav {
 
 }
 
-.slick-slide img{
+.slick-slide img {
     filter: blur(10px);
 }
 
-.center-slider .slick-current.slick-active img{
+.center-slider .slick-current.slick-active img {
     filter: none;
     -webkit-filter: none;
 }
@@ -368,26 +430,29 @@ nav {
 }
 
 
-.navbar_slide_content{
+.navbar_slide_content {
     width: 650px;
     height: 650px;
 }
 
-.navbar_slide_content img{
+.navbar_slide_content img {
     width: 100%;
 }
 
 
-.work_category{
-    font-family:'HighSummit';
+.work_category {
+    font-family: 'HighSummit';
     font-size: 151.5px;
     letter-spacing: -3.03px;
     color: #fff;
     display: none;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
 }
 
 
-.slick-current.slick-active .work_category{
+.slick-current.slick-active .work_category {
     display: block;
 }
 
@@ -396,7 +461,7 @@ nav {
 
 
 
-.partners .list.partners_list li{
+.partners .list.partners_list li {
     -webkit-text-stroke: 2px #000;
     font-family: 'NexaBold';
     font-size: 226px;
@@ -404,26 +469,26 @@ nav {
     color: #fff;
 }
 
-.partners .list.partners_list .text-color{
+.partners .list.partners_list .text-color {
     color: #000;
 }
 
-.flow_banner1{
+.flow_banner1 {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
 }
 
-.partners_wrap{
+.partners_wrap {
     position: absolute;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     left: 50%;
     width: 100%;
     max-width: 1500px;
 }
 
-.partners_title{
+.partners_title {
     font-family: 'NexaBold';
     font-size: 70px;
     font-weight: bold;
@@ -434,7 +499,7 @@ nav {
     margin-bottom: 26px;
 }
 
-.partners_title::after{
+.partners_title::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -444,19 +509,19 @@ nav {
     background-color: #000;
 }
 
-.partners_display{
+.partners_display {
     display: flex;
     align-items: flex-start;
     width: 100%;
 }
 
-.partners_side{
+.partners_side {
     width: 20%;
 }
 
 
 
-.partners_side p{
+.partners_side p {
     font-family: 'NexaBold';
     font-size: 42.5px;
     line-height: 1.19;
@@ -465,12 +530,12 @@ nav {
     color: #000;
 }
 
-.partners_side .p_span{
+.partners_side .p_span {
     font-family: 'NexaLight';
 }
 
 
-.partners_logo_contents{
+.partners_logo_contents {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15%, auto));
     column-gap: 22px;
@@ -480,7 +545,7 @@ nav {
     width: 80%;
 }
 
-.partners_logo_img img{
+.partners_logo_img img {
     width: 100%;
 }
 
@@ -551,7 +616,7 @@ nav {
 /* work_page */
 
 .work_page_s01 {
-    max-width:1770px;
+    max-width: 1770px;
     padding: 260px 78px 0px 78px;
 }
 
@@ -559,7 +624,7 @@ nav {
     font-family: 'NexaBold', sans-serif;
     color: #fff;
     display: block;
-    font-size:117px;
+    font-size: 117px;
 }
 
 .work_page_s01 .s01_text {
@@ -573,60 +638,60 @@ nav {
 
 
 .work_page_s01 .s01_text .text:nth-child(1)::after {
-    content:"";
+    content: "";
     height: 16px;
-    border:1px solid #fff;
+    border: 1px solid #fff;
     margin: 0px 35px 0px 35px;
 }
 
 .work_page_s01 .s01_text .text p:nth-child(1) {
     font-family: 'NexaBold', sans-serif;
     color: #fff;
-    font-size:20px;
+    font-size: 20px;
     display: block;
-    padding-right:15px;
+    padding-right: 15px;
 }
 
 .work_page_s01 .s01_text .text p:nth-child(2) {
     font-family: 'NexaLight', sans-serif;
     color: #fff;
-    font-size:20px;
+    font-size: 20px;
     display: block;
 }
 
 .s01_slide-wrap {
     position: relative;
-    width:100%;
-    height:996px;
-    background-color:#d4d4d4;
+    width: 100%;
+    height: 996px;
+    background-color: #d4d4d4;
 }
 
 .s01_btn {
     display: flex;
-    position:absolute;
-    width:100%;
+    position: absolute;
+    width: 100%;
     justify-content: space-between;
-    top:50%;
-    transform:translateY(-50%);
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .s01_btn_prev {
-    position:absolute;
-    left:50px;
+    position: absolute;
+    left: 50px;
 }
 
 .s01_btn_next {
-    position:absolute;
-    right:50px;
+    position: absolute;
+    right: 50px;
 }
 
 .s01_btn div img {
-    width:43px;
-    height:107px;
+    width: 43px;
+    height: 107px;
 }
 
 .work_page_s02 {
-    max-width:1770px;
+    max-width: 1770px;
     position: relative;
     margin: 100px 78px 0px 78px;
 }
@@ -634,14 +699,14 @@ nav {
 .work_page_s02 h2 {
     font-family: 'NexaBold', sans-serif;
     color: #fff;
-    font-size:80px;
+    font-size: 80px;
     text-align: right;
 }
 
 .work_page_s02 .line {
-    width:100%;
+    width: 100%;
     border: 1px solid #fff;
-    margin:24px 0px 33px 0px;
+    margin: 24px 0px 33px 0px;
 }
 
 .work_page_s02 .s02_fx_wrap {
@@ -650,13 +715,13 @@ nav {
 }
 
 .work_page_s02 .s02_fx_wrap .s02_fx_left {
-    padding-right:36px;
+    padding-right: 36px;
 }
 
 .work_page_s02 .s02_fx_wrap .s02_fx_left .text {
     font-family: 'NexaBold', sans-serif;
     color: #fffefe;
-    font-size:60px;
+    font-size: 60px;
 }
 
 .work_page_s02 .s02_fx_wrap .s02_fx_left .arrow_right {
@@ -665,8 +730,8 @@ nav {
 
 .work_page_s02 .s02_fx_wrap .s02_fx_left .arrow_right img {
     width: 187px;
-    height:103px;
-    margin-top:45px;
+    height: 103px;
+    margin-top: 45px;
 }
 
 .work_page_s02 .s02_fx_wrap .s02_fx_right {
@@ -680,39 +745,39 @@ nav {
 }
 
 .work_page_s03 .motion_content .marquee {
-    height:0%;
+    height: 0%;
 }
 
 .work_page_s03 .motion_content .marquee .track h2 {
     font-family: 'NexaBold', sans-serif;
     color: #fffefe;
-    font-size:228px;
+    font-size: 228px;
     white-space: nowrap;
 }
 
 footer {
-    padding:145px 0px 0px 78px;
+    padding: 145px 0px 0px 78px;
 }
 
 footer .footer_nav .list {
     font-family: 'NexaLight', sans-serif;
     color: #fff;
-    font-size:36.5px;
+    font-size: 36.5px;
     display: block;
     line-height: 54.5px;
 }
 
 footer .footer_nav .list img {
-    width:25px;
-    height:25px;
+    width: 25px;
+    height: 25px;
 }
 
-footer p{
+footer p {
     font-family: 'NexaLight', sans-serif;
     color: #fff;
-    font-size:20.5px;
+    font-size: 20.5px;
     display: block;
-    padding:101px 0px 56px 0px;
+    padding: 101px 0px 56px 0px;
 }
 
 .contact_s01 {
@@ -727,26 +792,26 @@ footer p{
 .contact_s01 .text_box h1 {
     font-family: 'NexaBold', sans-serif;
     color: #fffefe;
-    font-size:117px;
+    font-size: 117px;
     letter-spacing: -2.34px;
 }
 
 .contact_s01 p {
     font-family: 'NexaLight', sans-serif;
     color: #fff;
-    font-size:19.5px;
+    font-size: 19.5px;
     line-height: 25px;
     text-align: right;
 }
 
 .contact_s01 .text_wrap {
-    padding : 79px 0px 71px 0px;
+    padding: 79px 0px 71px 0px;
 }
 
 .contact_s01 .text_wrap li {
     font-family: 'NexaLight', sans-serif;
     color: #fff;
-    font-size:90.5px;
+    font-size: 90.5px;
     line-height: 99.5px;
     display: block;
     letter-spacing: -1.81px;
@@ -759,7 +824,7 @@ footer p{
 .contact_s02 form .contact {
     font-family: 'NexaLight', sans-serif;
     color: #fff;
-    font-size:29.5px;
+    font-size: 29.5px;
     line-height: 49px;
 }
 
@@ -772,19 +837,19 @@ footer p{
     width: 100%;
     font-size: 29.5px;
     line-height: 49px;
-    color:#5a5a5a;
+    color: #5a5a5a;
 }
 
 .contact_s02 form .btn button {
     cursor: pointer;
-    border:none;
-    background-color:transparent;
+    border: none;
+    background-color: transparent;
     outline: none;
 }
 
 .contact_s02 form .btn button p {
     font-family: 'NexaBold', sans-serif;
     color: #fff;
-    font-size:46.5px;
+    font-size: 46.5px;
     line-height: 49px;
 }
