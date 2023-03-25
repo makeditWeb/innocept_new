@@ -654,6 +654,20 @@ nav {
 }
 
 /* ===========================COMPANY=========================== */
+.company_people{
+    position: absolute;
+    bottom: 84px;
+    left: 78px;
+}
+.company_wrapp{
+    position: absolute;
+    bottom: 69px;
+    left: 78px;
+}
+
+.company_title{
+    margin-bottom: 46px;
+}
 
 .company_title h3{
     font-family: 'NexaBold', sans-serif;
@@ -670,12 +684,42 @@ nav {
     color: #fff;
 }
 
-.company_people h2{
+
+.company_people .text_hover{
     font-family: 'NexaBold', sans-serif;
-    color:#fff;
     font-size: 146.5px;
     line-height: 1.07;
     color: #fefefe;
+    cursor: pointer;
+}
+
+.company_people .text_hover:hover{
+    font-family: 'NexaBold', sans-serif;
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
+}
+
+.company_people .text-change{
+    font-family: 'NexaBold', sans-serif;
+    font-size: 146.5px;
+    line-height: 1.07;
+    color: #fefefe;
+    cursor: pointer;
+}
+
+.company_people .text-change:hover{
+    font-size: 0;
+    font-family: 'NexaBold', sans-serif;
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
+}
+
+
+.company_people .text-change:hover::before{
+    font-size: 146.5px;
+    content: attr(data-hover);
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
 }
 
 
