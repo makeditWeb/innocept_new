@@ -9,8 +9,8 @@
 
     <link rel="stylesheet" href="../cmn/reset.css">
     <link rel="stylesheet" href="../cmn/style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="../cmn/jquery.fullPage.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
     <link rel="icon" href="../images/logo.png">
 
@@ -294,6 +294,30 @@
                 autoplay: true
             });
         });
+
+
+        
+// Handle scrolling when tapping on the navbar menu
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    if (scrollTo === null) {
+        return;
+    }
+    scrollTo.scrollIntoView({ behavior: 'smooth' });
+}
+
+const navbarMenu = document.querySelector('.navbar_wrap');
+navbarMenu.addEventListener('click', (event) => {
+    const target = event.target;
+    const link = target.dataset.link;
+    if (link == null) {
+        return;
+    }
+    navbarMenu.classList.remove('open');
+    scrollIntoView(link);
+});
+
+
     </script>
 
 

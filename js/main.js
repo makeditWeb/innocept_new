@@ -1,30 +1,15 @@
+// navbar slide down
+window.addEventListener('load', function () {
+    document.querySelector('.navbar').classList.add('animate');
+});
+
+
 // fullpage js
 $(document).ready(function () {
     $('#fullpage').fullpage({
         scrollBar: true
     });
 });
-
-// Handle scrolling when tapping on the navbar menu
-function scrollIntoView(selector) {
-    const scrollTo = document.querySelector(selector);
-    if (scrollTo === null) {
-        return;
-    }
-    scrollTo.scrollIntoView({ behavior: 'smooth' });
-}
-
-const navbarMenu = document.querySelector('.navbar_wrap');
-navbarMenu.addEventListener('click', (event) => {
-    const target = event.target;
-    const link = target.dataset.link;
-    if (link == null) {
-        return;
-    }
-    navbarMenu.classList.remove('open');
-    scrollIntoView(link);
-});
-
 
 
 // 스크롤시 navbar 색상 변경 및 logo 이미지 변경

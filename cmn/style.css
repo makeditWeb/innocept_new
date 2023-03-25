@@ -122,7 +122,7 @@ body {
 nav {
     display: flex;
     position: fixed;
-    top: 0;
+    top: -100px;
     left: 0;
     width: 100%;
     padding: 50px 70px;
@@ -135,6 +135,21 @@ nav {
     height: 150px;
     background-color: transparent;
     transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.animate {
+    animation-name: slideDown;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideDown {
+    from {
+        top: -100px;
+    }
+    to {
+        top: 0;
+    }
 }
 
 .navbar.show {
@@ -175,6 +190,10 @@ nav {
 .main_navbar {
     display: flex;
 }
+
+
+
+
 
 /* White Logo */
 
@@ -279,7 +298,7 @@ nav {
 @keyframes move-up {
     0% {
         opacity: 0;
-        transform: translateY(80px);
+        transform: translateY(200px);
         /* 50px 만큼 아래로 이동 */
     }
 
@@ -634,8 +653,33 @@ nav {
     }
 }
 
+/* ===========================COMPANY=========================== */
 
-/* work_page */
+.company_title h3{
+    font-family: 'NexaBold', sans-serif;
+    font-size: 90.5px;
+    line-height: 1.07;
+    color: #fefefe;
+}
+
+.company_sub P{
+    font-family: 'NexaLight', sans-serif;
+    font-size: 58px;
+    font-weight: 300;
+    line-height: 1.22;
+    color: #fff;
+}
+
+.company_people h2{
+    font-family: 'NexaBold', sans-serif;
+    color:#fff;
+    font-size: 146.5px;
+    line-height: 1.07;
+    color: #fefefe;
+}
+
+
+/* ===========================work_page============================ */
 
 .work_page_s01 {
     max-width: 1770px;
@@ -828,7 +872,10 @@ nav {
 }
 
 
-/* contact */
+
+
+
+/* =============================contact =============================*/
 
 .contact_s01 {
     padding: 467px 68px 0px 68px;
