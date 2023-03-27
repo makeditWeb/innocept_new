@@ -13,23 +13,33 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://unpkg.com/swup/dist/swup.min.css">
     <link rel="icon" href="../images/logo.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 
 <body data-swup class="swup-transition-work-to-main">
 
-    <nav class="navbar main_navbar">
+    <nav class="navbar">
         <div class="nav_logo">
             <a href="./main.html">
-                <img src="../images/logo.png" alt="logo">
+                <img src="../images/logo.png" alt="logo" class="white_logo">
+                <img src="../images/logo_black.png" alt="logo" class="black_logo">
             </a>
         </div>
         <ul class="navbar_wrap">
-            <li class="navbar_item"><a href="./main.html">info@innocept.co.kr</a></li>
+            <li class="navbar_item"><a href="./main.html" >info@innocept.co.kr</a></li>
             <li class="navbar_item"><a href="./company.html">COMPANY</a></li>
-            <li class="navbar_item"><a href="./work.html">WORK</a></li>
+            <li class="navbar_item"><a href="./work.html">WORK</li>
             <li class="navbar_item"><a href="./contact.html">CONTACT</a></li>
         </ul>
+
+        <button class="navbar_toggle_btn">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+
     </nav>
     <main> data-transition="slidedown"
 
@@ -141,7 +151,23 @@
                 speed: 300,
                 infinite: true,
                 autoplaySpeed: 3000,
-                autoplay: true
+                autoplay: true,
+                responsive: [ // 반응형 웹 구현 옵션
+					{  
+						breakpoint: 1024, //화면 사이즈 960px
+						settings: {
+							//위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+							slidesToShow:2 
+						} 
+					},
+					{ 
+						breakpoint: 768, //화면 사이즈 768px
+						settings: {	
+							//위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+							slidesToShow:1 
+						} 
+					}
+				]
             });
         });
 

@@ -1,4 +1,11 @@
 
+const navbarToggleBtn = document.querySelector('.navbar_toggle_btn');
+const navbarMenuWrap = document.querySelector('.navbar_wrap');
+navbarToggleBtn.addEventListener('click', () => {
+  navbarMenuWrap.classList.toggle('open');
+});
+
+
 // navbar slide down
 window.addEventListener('load', function () {
     document.querySelector('.navbar').classList.add('animate');
