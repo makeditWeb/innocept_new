@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,14 @@
 
     <link rel="stylesheet" href="../cmn/reset.css">
     <link rel="stylesheet" href="../cmn/style.css">
-    <link rel="icon" href="../images/logo.png"> 
+    <link rel="stylesheet" href="../cmn/jquery.fullPage.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swup/dist/swup.min.css">
+    <link rel="icon" href="../images/logo.png">
 </head>
-<body>
+
+
+<body data-swup class="swup-transition-work-to-main">
 
     <nav class="navbar main_navbar">
         <div class="nav_logo">
@@ -25,54 +31,127 @@
             <li class="navbar_item"><a href="./contact.html">CONTACT</a></li>
         </ul>
     </nav>
-
-<section class="work_content">
-
-        <ul class="work_content-wrap">
-            <li class="work_content-list">EXHIBITION</li>
-            <li class="work_content-list">SHOWROOM ・ INTERIOR</li>
-            <li class="work_content-list">EVENT ・ PROMOTION</li>
-            <li class="work_content-list">GRAPHIC ・ MULTIMEDIA</li>
-            <li class="work_content-list">CONFERENCE</li>
-        </ul>
-
-        <div class="work_content_boxBg">
-
-            <div class="work_content_box-wrap">
-        
-                <div class="work_content_box">
-                    <p class="box"></p>
-                    <p class="text"><a href="./work_page.html">PROJECT NAME</a></p>
-                </div>
-                <div class="work_content_box">
-                    <p class="box"></p>
-                    <p class="text"><a href="./work_page.html">PROJECT NAME</a></p>
-                </div>
-                <div class="work_content_box">
-                    <p class="box"></p>
-                    <p class="text"><a href="./work_page.html">PROJECT NAME</a></p>
-                </div>
-                <div class="work_content_box">
-                    <p class="box"></p>
-                    <p class="text"><a href="./work_page.html">PROJECT NAME</a></p>
-                </div>
-                <div class="work_content_box">
-                    <p class="box"></p>
-                    <p class="text"><a href="./work_page.html">PROJECT NAME</a></p>
-                </div>
-        
-            </div>
-        
-        </div>
-
-</section>
+    <main> data-transition="slidedown"
 
 
+        <section class="work_content bg-black">
+
+            <div class="work_wrap">
+                <ul class="work_content-wrap">
+                    <li class="work_content-list active" data-transition="slidedown">EXHIBITION</li>
+                    <li class="work_content-list" data-transition="slidedown">SHOWROOM ・ INTERIOR</li>
+                    <li class="work_content-list" data-transition="slidedown">EVENT ・ PROMOTION</li>
+                    <li class="work_content-list" data-transition="slidedown">GRAPHIC ・ MULTIMEDIA</li>
+                    <li class="work_content-list" data-transition="slidedown">CONFERENCE</li>
+                </ul>
     
+                <div class="work_content_boxBg">
+    
+                    <div class="work_category_slide">
+                        <div class="work_content_box">
+                            <a href="../home/work_page.html">
+                                <div class="work_slide_img">
+                                    <img src="../images/slide_img1.jpg">
+                                </div>
+                                <div class="work_slide_text">
+                                    <p class="text">PROJECT NAME</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="work_content_box">
+                            <a href="../home/work_page.html">
+                                <div class="work_slide_img">
+                                    <img src="../images/slide_img1.jpg">
+                                </div>
+                                <div class="work_slide_text">
+                                    <p class="text">PROJECT NAME</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="work_content_box">
+                            <a href="../home/work_page.html">
+                                <div class="work_slide_img">
+                                    <img src="../images/slide_img1.jpg">
+                                </div>
+                                <div class="work_slide_text">
+                                    <p class="text">PROJECT NAME</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="work_content_box">
+                            <a href="../home/work_page.html">
+                                <div class="work_slide_img">
+                                    <img src="../images/slide_img1.jpg">
+                                </div>
+                                <div class="work_slide_text">
+                                    <p class="text">PROJECT NAME</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="work_content_box">
+                            <a href="../home/work_page.html">
+                                <div class="work_slide_img">
+                                    <img src="../images/slide_img1.jpg">
+                                </div>
+                                <div class="work_slide_text">
+                                    <p class="text">PROJECT NAME</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
 
 
 
+    </main>
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+        integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/swup@3" defer></script>
 
     <script src="../js/main.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('.work_category_slide').slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: false,
+                speed: 300,
+                infinite: true,
+                autoplaySpeed: 3000,
+                autoplay: true
+            });
+        });
+
+
+        const swup = new Swup({
+            animationSelector: '[class*="swup-transition-"]'
+        });
+
+        
+    </script>
 </body>
+
 </html>

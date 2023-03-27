@@ -1,3 +1,4 @@
+
 // navbar slide down
 window.addEventListener('load', function () {
     document.querySelector('.navbar').classList.add('animate');
@@ -37,10 +38,9 @@ window.addEventListener('scroll', function () {
 
 
 // text slide
-$(window).on('load', function () {
+$(document).ready(function () {
     setFlowBanner();
-})
-
+});
 
 function setFlowBanner() {
     $('.flow_banner').each(function () {
@@ -139,3 +139,46 @@ function setFlowBanner2() {
         $wrap2.find('.motion_rigth').css({ 'animation': `${listWidth2 / speed2}s linear infinite flowRolling1` });
     }
 }
+
+
+// 
+const spyEls = document.querySelectorAll('div.scroll-spy')
+// 요소들 반복 처리!
+spyEls.forEach(function (spyEl) {
+    new ScrollMagic
+        .Scene({ // 감시할 장면(Scene)을 추가
+            triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
+            triggerHook: .8 // 화면의 80% 지점에서 보여짐 여부 감시
+        })
+        .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
+        .addTo(new ScrollMagic.Controller()) // 컨트롤러에 장면을 할당(필수!)
+})
+
+
+// fade-in
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+fadeEls.forEach(function (fadeEl, index) {
+    gsap.to(fadeEl, 1, {
+        delay: (index + 1) * .7, //0.7, 1.4, 2.1, 2.7 s 후 동작
+        opacity: 1
+    });
+});
+
+
+
+// 
+
+jQuery(function ($) {
+    $("body").css("display", "none");
+    $("body").fadeIn(2000);
+    $("a.transition").click(function (event) {
+        event.preventDefault();
+        linkLocation = this.href;
+        $("body").fadeOut(1000, redirectPage);
+    });
+    function redirectPage() {
+        window.location = linkLocation;
+    }
+});
+
+

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../cmn/style.css">
     <link rel="stylesheet" href="../cmn/jquery.fullPage.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-
+    <link rel="stylesheet" href="https://unpkg.com/swup/dist/swup.min.css">
     <link rel="icon" href="../images/logo.png">
 
     
@@ -22,8 +22,8 @@
 </head>
 
 <body>
-
-    <!-- <div class="landing-page">
+<!-- 
+    <div class="landing-page">
         <div class="loading-screen">
         </div>
         <div class="logo">
@@ -31,218 +31,232 @@
         </div>
     </div> -->
 
-    <div id="fullpage" class="main wrapper">
-        <nav class="navbar">
-            <div class="nav_logo">
-                <a href="./main.html">
-                    <img src="../images/logo.png" alt="logo" class="white_logo">
-                    <img src="../images/logo_black.png" alt="logo" class="black_logo">
-                </a>
-            </div>
-            <ul class="navbar_wrap">
-                <li class="navbar_item"><a href="./main.html">info@innocept.co.kr</a></li>
-                <li class="navbar_item"><a href="./company.html">COMPANY</a></li>
-                <li class="navbar_item" data-link="#work">WORK</li>
-                <li class="navbar_item"><a href="./contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
+        <div id="fullpage" class="main wrapper">
 
-
-
-        <section class="section main_top bg-black"  data-page="1">
-            <!-- navbar -->
-            <div class="main_top_content">
-                <div class="line">
-                    <h2>WE CREATE</h2>
-                </div>
-                <div class="line">
-                    <h2>ONE SPACE INTO</h2>
-                </div>
-                <div class="line">
-                    <h2>ONE MILLION</h2>
-                </div>
-                <div class="line">
-                    <h2>MASTERPIECES</h2>
-                </div>
-            </div>
-        </section>
-
-        <section class="section height_max bg-black " data-page="2">
-            <div class="motion_content">
-                <div class="marquee">
-                    <div class="flow_banner">
-                        <ul class="list">
-                            <li>WORK</li>
-                            <li class="text-stroke">WORK</li>
-                            <li>WORK</li>
-                            <li class="text-stroke">WORK</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <section id="work" class="section bg-black height_max " data-page="3">
-            <div class="center-slider">
-                <div class="navbar_slide_content">
-                    <a href="../home/work.html">
-                        <img src="../images/slide_img1.jpg" alt="slide">
-                        <div class="work_category">exhibition</div>
+            <nav class="navbar">
+                <div class="nav_logo">
+                    <a href="./main.html">
+                        <img src="../images/logo.png" alt="logo" class="white_logo">
+                        <img src="../images/logo_black.png" alt="logo" class="black_logo">
                     </a>
                 </div>
-                <div class="navbar_slide_content">
-                    <a href="../home/work.html">
-                        <img src="../images/slide_img1.jpg" alt="slide">
-                        <div class="work_category">exhibition</div>
-                    </a>
-                </div>
-                <div class="navbar_slide_content">
-                    <a href="../home/work.html">
-                        <img src="../images/slide_img1.jpg" alt="slide">
-                        <div class="work_category">exhibition</div>
-                    </a>
-                </div>
-                <div class="navbar_slide_content">
-                    <a href="../home/work.html">
-                        <img src="../images/slide_img1.jpg" alt="slide">
-                        <div class="work_category">exhibition</div>
-                    </a>
-                </div>
-            </div>
-        </section>
+                <ul class="navbar_wrap">
+                    <li class="navbar_item"><a href="./main.html" >info@innocept.co.kr</a></li>
+                    <li class="navbar_item"><a href="./company.html">COMPANY</a></li>
+                    <li class="navbar_item" data-link="#work">WORK</li>
+                    <li class="navbar_item"><a href="./contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
 
-
-        <section class="section partners bg-white height_max " data-page="4">
-            <div class="wrapp_inner">
-                <div class="flow_banner">
-                    <ul class="list partners_list motion_rigth">
-                        <li>PARTNERS</li>
-                        <li class="text-color">PARTNERS</li>
-                        <li>PARTNERS</li>
-                        <li class="text-color">PARTNERS</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="section partners_logo bg-white height_max"  data-page="5">
-            <div class="partners_wrap">
-                <div class="partners_title">
-                    PARTNERS
-                </div>
-                <div class="partners_display">
-                    <div class="partners_side">
-                        <p>Bringing</p>
-                        <p>brand</p>
-                        <p class="p_span">and</p>
-                        <p>clients</p>
-                        <p>together</p>
-                    </div>
-                    <div class="partners_logo_contents">
-                        <div class="partners_logo_img">
-                            <img src="../images/partners1.jpg" alt="partners">
+            <main id="main">
+                <section class="section main_top bg-black"  data-page="1">
+                    <!-- navbar -->
+                    <div class="main_top_content">
+                        <div class="line">
+                            <h2>WE CREATE</h2>
                         </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners2.jpg" alt="partners">
+                        <div class="line">
+                            <h2>ONE SPACE INTO</h2>
                         </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners3.jpg" alt="partners">
+                        <div class="line">
+                            <h2>ONE MILLION</h2>
                         </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners4.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners5.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners6.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners7.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners8.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners9.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners10.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners11.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners12.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners13.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners14.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners15.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners16.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners17.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners18.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners19.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners20.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners21.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners22.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners23.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners24.jpg" alt="partners">
-                        </div>
-                        <div class="partners_logo_img">
-                            <img src="../images/partners25.png" alt="partners">
+                        <div class="line">
+                            <h2>MASTERPIECES</h2>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <section class="section footer bg-black height_max" data-page="6">
-            <div class="wrapp_inner">
-                <div class="flow_banner">
-                    <ul class="list">
-                        <li>INNOCEPT DEVELOPMENT Co., Ltd.</li>
-                        <li class="text-stroke">INNOCEPT DEVELOPMENT Co., Ltd.</li>
-                    </ul>
-                </div>
+                <section class="section height_max bg-black " data-page="2">
+                    <div class="motion_content">
+                        <div class="marquee">
+                            <div class="flow_banner">
+                                <ul class="list">
+                                    <li>WORK</li>
+                                    <li class="text-stroke">WORK</li>
+                                    <li>WORK</li>
+                                    <li class="text-stroke">WORK</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
-                <footer>
-            
-                    <ul class="footer_nav">
-                        <li class="list">COMPANY</li>
-                        <li class="list">WORK</li>
-                        <li class="list">CONTACT</li>
-                        <li class="list">INSTAGRAM <a href="#"><img src="../images/view-arrow.png" alt="view-arrow"></a></li>
-                    </ul>
-                    <p>2023 © INNOCEPT DEVELOPMENT Co., Ltd. All Right Reserved.</p>
-                </footer>
-            </div>
+                </section>
+
+                <section id="work" class="section main_work_slide bg-black height_max " data-page="3">
+                    <div class="center-slider">
+                        <div class="navbar_slide_content">
+                            <a href="../home/work.html" data-swup class="swup-transition-main-to-work">
+                                <img src="../images/slide_img1.jpg" alt="slide">
+                                <div class="work_category">exhibition</div>
+                            </a>
+                        </div>
+                        <div class="navbar_slide_content">
+                            <a href="../home/work.html"  data-swup class="swup-transition-main-to-work">
+                                <img src="../images/slide_img1.jpg" alt="slide">
+                                <div class="work_category long-text text-positon1">showroom & interior</div>
+                            </a>
+                        </div>
+                        <div class="navbar_slide_content">
+                            <a href="../home/work.html"  data-swup class="swup-transition-main-to-work">
+                                <img src="../images/slide_img1.jpg" alt="slide">
+                                <div class="work_category long-text text-positon2 aligin-right">event & promotion</div>
+                            </a>
+                        </div>
+                        <div class="navbar_slide_content">
+                            <a href="../home/work.html" data-swup class="swup-transition-main-to-work">
+                                <img src="../images/slide_img1.jpg" alt="slide">
+                                <div class="work_category long-text text-positon3">graphic & multimedia</div>
+                            </a>
+                        </div>
+                        <div class="navbar_slide_content">
+                            <a href="../home/work.html" data-swup class="swup-transition-main-to-work">
+                                <img src="../images/slide_img1.jpg" alt="slide">
+                                <div class="work_category text-positon4">conference</div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
 
 
-        </section>
+                <section class="section partners bg-white height_max " data-page="4">
+                    <div class="wrapp_inner">
+                        <div class="flow_banner">
+                            <ul class="list partners_list motion_rigth">
+                                <li>PARTNERS</li>
+                                <li class="text-color">PARTNERS</li>
+                                <li>PARTNERS</li>
+                                <li class="text-color">PARTNERS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section partners_logo bg-white height_max"  data-page="5">
+                    <div class="partners_wrap">
+                        <div class="partners_title">
+                            PARTNERS
+                        </div>
+                        <div class="partners_display">
+                            <div class="partners_side">
+                                <p>Bringing</p>
+                                <p>brand</p>
+                                <p class="p_span">and</p>
+                                <p>clients</p>
+                                <p>together</p>
+                            </div>
+                            <div class="partners_logo_contents">
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners1.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners2.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners3.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners4.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners5.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners6.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners7.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners8.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners9.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners10.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners11.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners12.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners13.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners14.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners15.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners16.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners17.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners18.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners19.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners20.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners21.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners22.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners23.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners24.jpg" alt="partners">
+                                </div>
+                                <div class="partners_logo_img">
+                                    <img src="../images/partners25.png" alt="partners">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section footer bg-black height_max" data-page="6">
+                    <div class="wrapp_inner">
+                        <div class="flow_banner">
+                            <ul class="list">
+                                <li>INNOCEPT DEVELOPMENT Co., Ltd.</li>
+                                <li class="text-stroke">INNOCEPT DEVELOPMENT Co., Ltd.</li>
+                            </ul>
+                        </div>
+
+                        <footer>
+                    
+                            <ul class="footer_nav">
+                                <li class="list">COMPANY</li>
+                                <li class="list">WORK</li>
+                                <li class="list">CONTACT</li>
+                                <li class="list">INSTAGRAM <a href="#"><img src="../images/view-arrow.png" alt="view-arrow"></a></li>
+                            </ul>
+                            <p>2023 © INNOCEPT DEVELOPMENT Co., Ltd. All Right Reserved.</p>
+                        </footer>
+                    </div>
+
+
+                </section>
+
+            </main>
+        </div>
+<!-- 
+        <div class="transition-wipe overlay"></div> -->
+
+
+
 
 
     </div>
@@ -251,33 +265,38 @@
 
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/jquery.fullPage.js"></script>
 
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../js/jquery.fullPage.js" defer></script>
-
-
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
 
     <!-- slick js -->
     <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-   
-    <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/swup@3" ></script>
+    <script src="../js/main.js" defer></script>
 
     <script>
+
+
 // scroll section 
 
 
 
 
-        // window.onload = function () {
-        //     document.querySelector('.logo').style.display = 'block';
-        //     setTimeout(function () {
-        //         document.querySelector('.loading-screen').style.display = 'none';
-        //         document.querySelector('.logo').style.display = 'none';
-        //         document.querySelector('.navbar').style.display = 'flex';
-        //         document.querySelector('.main').style.display = 'block'; // 메인 화면 보이도록 설정
-        //     }, 4000); // 3초 후에 loading screen 제거
-        // }
+// $(document).ready(function () {
+//     document.querySelector('.logo').style.display = 'block';
+//     setTimeout(function () {
+//         document.querySelector('.loading-screen').style.display = 'none';
+//         document.querySelector('.logo').style.display = 'none';
+//         document.querySelector('.navbar').style.display = 'flex';
+//         document.querySelector('#main').style.display = 'block'; // 메인 화면 보이도록 설정
+//     }, 4000); // 3초 후에 loading screen 제거
+
+//     setFlowBanner();
+// });
+
 
 
         $(document).ready(function () {
@@ -290,7 +309,7 @@
                 speed: 300,
                 centerPadding: '30px',
                 infinite: true,
-                autoplaySpeed: 5000,
+                autoplaySpeed: 3000,
                 autoplay: true
             });
         });
@@ -318,6 +337,13 @@ navbarMenu.addEventListener('click', (event) => {
 });
 
 
+
+
+const swup = new Swup({
+      plugins: [new SwupSlideTheme()]
+    });
+    
+    
     </script>
 
 
