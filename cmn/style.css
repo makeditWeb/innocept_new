@@ -555,6 +555,15 @@ nav {
     left: 0;
 }
 
+.center-slider .slick-next,
+.center-slider .slick-prev{
+    top: 30%;
+}
+
+
+.center-slider .slick-prev{
+    left: 25px;
+}
 
 .slick-current.slick-active .work_category {
     display: block;
@@ -1253,12 +1262,13 @@ footer {
     padding: 76px 0px 0px 78px;
 }
 
-footer .footer_nav .list {
+footer .footer_nav .list a {
     font-family: 'NexaLight', sans-serif;
     color: #fff;
     font-size: 36.5px;
     display: block;
     line-height: 54.5px;
+    text-decoration: none;
 }
 
 footer .footer_nav .list img {
