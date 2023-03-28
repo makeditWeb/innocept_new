@@ -2,7 +2,7 @@
 const navbarToggleBtn = document.querySelector('.navbar_toggle_btn');
 const navbarMenuWrap = document.querySelector('.navbar_wrap');
 navbarToggleBtn.addEventListener('click', () => {
-  navbarMenuWrap.classList.toggle('open');
+    navbarMenuWrap.classList.toggle('open');
 });
 
 

@@ -299,7 +299,7 @@ nav {
 }
 
 
-.bg-white .navbar_toggle_btn{
+.bg-white .navbar_toggle_btn {
     color: #000;
 }
 
@@ -311,7 +311,7 @@ nav {
     color: black;
   } */
 
-  .navbar_toggle_btn{
+.navbar_toggle_btn {
     position: absolute;
     right: 32px;
     color: #fff;
@@ -319,7 +319,7 @@ nav {
     background: transparent;
     border: none;
     top: 15px;
-  }
+}
 
 
 
@@ -410,13 +410,15 @@ nav {
 
 .flow_banner .list,
 .flow_banner1 .motion_rigth,
+.flow_banner .partners_list,
 .marquee_company .company_list,
 .team_banner .team_list {
     display: flex;
 }
 
 
-.flow_banner .list li {
+.flow_banner .list li,
+.partners_list li {
     font-size: 226px;
     font-weight: bold;
     letter-spacing: -4.52px;
@@ -556,12 +558,12 @@ nav {
 }
 
 .center-slider .slick-next,
-.center-slider .slick-prev{
-    top: 30%;
+.center-slider .slick-prev {
+    top: 45%;
 }
 
 
-.center-slider .slick-prev{
+.center-slider .slick-prev {
     left: 25px;
 }
 
@@ -602,7 +604,7 @@ nav {
 
 
 
-.partners .list.partners_list li {
+.partners .partners_list li {
     -webkit-text-stroke: 2px #000;
     font-family: 'NexaBold';
     font-size: 226px;
@@ -610,7 +612,7 @@ nav {
     color: #fff;
 }
 
-.partners .list.partners_list .text-color {
+.partners .partners_list .text-color {
     color: #000;
 }
 
@@ -756,7 +758,7 @@ nav {
     ;
 }
 
-.work_slide_img{
+.work_slide_img {
     width: 450px;
     height: 450px;
 }
@@ -768,6 +770,7 @@ nav {
 
 .work_content_boxBg .work_content_box a {
     text-decoration: none;
+    display: inline-block;
 }
 
 .work_content_boxBg .work_content_box .work_slide_text {
@@ -821,6 +824,9 @@ nav {
     position: absolute;
     bottom: 84px;
     left: 78px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
 }
 
 .company_wrapp {
@@ -855,6 +861,7 @@ nav {
     line-height: 1.07;
     color: #fefefe;
     cursor: pointer;
+    display: inline;
 }
 
 .company_people .text_hover:hover {
@@ -987,23 +994,100 @@ nav {
 }
 
 
+.company_team_bg {}
 
+.team-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.team_group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-asset {
+    width: 150px;
+    height: 150px;
+}
+
+.team-asset img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.design .team_group:nth-child(3) {
+    display: flex;
+    justify-content: space-around;
+}
+
+.design .team_group:nth-child(4) {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contents .team_group:nth-child(2) {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contents .team_group:nth-child(4) {
+    display: flex;
+    justify-content: center;
+}
+
+
+.operation .team_group:nth-child(1) {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.operation .team_group:nth-child(4) {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.asset-crop {
+    display: none;
+}
+
+
+
+.company_team_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+  .company_team_bg .team-inner {
+    display: none;
+  }
+
+
+  .design_team,.contents_team,.operations_team,.develop_team {
+    display: inline-block;
+  }
 /* ===========================work_page============================ */
 
 .work_project {
-    padding: 260px 78px 0px 78px;
+    padding: 180px 78px 0px;
 }
 
 .work_project h1 {
     font-family: 'NexaBold', sans-serif;
     color: #fff;
     display: block;
-    font-size: 117px;
+    font-size: 87px;
 }
 
 .work_project .s01_text {
     display: flex;
-    margin: 59px 0px 58px 0px;
+    margin: 20px 0;
 }
 
 .work_project .s01_text .text {
@@ -1034,6 +1118,16 @@ nav {
     font-size: 20px;
     display: block;
 }
+
+.project_slide {
+    height: 580px !important;
+}
+
+.project_slide img {
+    object-fit: contain;
+}
+
+
 
 .s01_slide-wrap {
     display: flex;
@@ -1229,10 +1323,14 @@ nav {
     outline: none;
     border: none;
     /* text-align: right; */
-    width: 100%;
+
     font-size: 29.5px;
     color: #5a5a5a;
     text-align: left;
+}
+
+.contact_s02 form .contact ul li input::placeholder{
+    font-size: 18PX;
 }
 
 .contact_s02 form .btn {
@@ -1486,7 +1584,7 @@ footer p {
         margin-bottom: 46px;
     }
 
-    
+
 
 
 
@@ -1661,6 +1759,7 @@ footer p {
         height: 50px;
         padding: 20px;
     }
+
     nav {
         display: flex;
         position: fixed;
@@ -1685,23 +1784,23 @@ footer p {
         padding: 0.5rem 1rem;
     }
 
-    .navbar_toggle_btn{
+    .navbar_toggle_btn {
         display: block;
     }
 
-    .navbar{
+    .navbar {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .navbar_wrap{
+    .navbar_wrap {
         flex-direction: column;
         text-align: center;
         width: 100%;
         display: none;
     }
 
-    .navbar_wrap.open{
+    .navbar_wrap.open {
         display: block;
         height: 150px;
     }
@@ -1896,13 +1995,14 @@ footer p {
     }
 
 
-    .work_slide_img{
+    .work_slide_img {
         width: 100%;
     }
 
-    .work_slide_img img{
+    .work_slide_img img {
         width: 100%;
     }
+
     .work_page_s01 h1 {
         font-size: 70px;
     }
@@ -1946,7 +2046,7 @@ footer p {
         height: 500px;
     }
 
-    .work_page_s02 .s02_fx_wrap .s02_fx_right img{
+    .work_page_s02 .s02_fx_wrap .s02_fx_right img {
         width: 100%;
         height: 100%;
         object-fit: contain;
@@ -2025,6 +2125,7 @@ footer p {
     .work_project {
         padding: 200px 20px;
     }
+
     .s01_slide-wrap .project_slide {
         width: 100%;
         height: 500PX;
@@ -2038,7 +2139,7 @@ footer p {
         height: 50px;
         transform: rotate(-45deg);
     }
-    
+
     .slick-next {
         position: absolute;
         right: 16px;
@@ -2069,6 +2170,7 @@ footer p {
         font-size: 47px;
         letter-spacing: -2.34px;
     }
+
     .contact_s01 p {
         font-family: 'NexaLight', sans-serif;
         color: #fff;
@@ -2124,149 +2226,151 @@ footer p {
         width: 100%;
     }
 
-    .contact_s02 form .contact ul li input{
+    .contact_s02 form .contact ul li input {
         font-family: 'NexaLight', sans-serif;
-    background-color: transparent;
-    outline: none;
-    border: none;
-    /* text-align: right; */
-    width: 100%;
-    font-size: 15.5px;
-    color: #5a5a5a;
-    text-align: left;
-    width: 100%;
-}
+        background-color: transparent;
+        outline: none;
+        border: none;
+        /* text-align: right; */
+        width: 100%;
+        font-size: 15.5px;
+        color: #5a5a5a;
+        text-align: left;
+        width: 100%;
+    }
 
-.contact_s02 form .contact ul li {
-    border-bottom: 1px solid #fff;
-    display: flex;
-    /* height: 133px; */
-    padding-top: 95px;
-    width: 100%;
-    justify-content: space-between;
-}
+    .contact_s02 form .contact ul li {
+        border-bottom: 1px solid #fff;
+        display: flex;
+        /* height: 133px; */
+        padding-top: 95px;
+        width: 100%;
+        justify-content: space-between;
+    }
 
-.contact_s02 form .btn button p {
-    font-family: 'NexaBold', sans-serif;
-    color: #fff;
-    font-size: 34.5px;
-    line-height: 49px;
-    width: 280px;
-    text-align: left;
-}
-    
-.contact_s02 form .contact ul li label {
-    width: 30%;
-    font-size: 16px;
-}
+    .contact_s02 form .btn button p {
+        font-family: 'NexaBold', sans-serif;
+        color: #fff;
+        font-size: 34.5px;
+        line-height: 49px;
+        width: 280px;
+        text-align: left;
+    }
 
-.contact_s02 form .contact ul li input {
-    font-family: 'NexaLight', sans-serif;
-    background-color: transparent;
-    outline: none;
-    border: none;
-    text-align: right;
-    width: 100%;
-    font-size: 11.5px;
-    color: #5a5a5a;
-    width: 70%;
-}
+    .contact_s02 form .contact ul li label {
+        width: 30%;
+        font-size: 16px;
+    }
 
-.work_content-wrap .work_content-list {
-    font-family: 'NexaLight', sans-serif;
-    color: #fffefe;
-    display: block;
-    font-size: 16px;
-    padding: 0px 20px 0px 0px;
-    line-height: 34px;
-}
+    .contact_s02 form .contact ul li input {
+        font-family: 'NexaLight', sans-serif;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        text-align: right;
+        width: 100%;
+        font-size: 11.5px;
+        color: #5a5a5a;
+        width: 70%;
+    }
 
-
-
-.company_title h3 {
-    font-family: 'NexaBold', sans-serif;
-    font-size: 40.5px;
-    line-height: 1.07;
-    color: #fefefe;
-}
-
-.company_sub P {
-    font-family: 'NexaLight', sans-serif;
-    font-size: 40.5px;
-    font-weight: 300;
-    line-height: 1.22;
-    color: #fff;
-}
+    .work_content-wrap .work_content-list {
+        font-family: 'NexaLight', sans-serif;
+        color: #fffefe;
+        display: block;
+        font-size: 16px;
+        padding: 0px 20px 0px 0px;
+        line-height: 34px;
+    }
 
 
-.company_people .text_hover {
-    font-family: 'NexaBold', sans-serif;
-    font-size: 40.5px;
-    line-height: 1.07;
-    color: #fefefe;
-    cursor: pointer;
-}
 
-.company_people .text_hover:hover {
-    font-family: 'NexaBold', sans-serif;
-    color: #000;
-    -webkit-text-stroke: 2px #fff;
-}
+    .company_title h3 {
+        font-family: 'NexaBold', sans-serif;
+        font-size: 40.5px;
+        line-height: 1.07;
+        color: #fefefe;
+    }
 
-.company_people .text-change {
-    font-family: 'NexaBold', sans-serif;
-    font-size: 40.5px;
-    line-height: 1.07;
-    color: #fefefe;
-    cursor: pointer;
-}
-
-.company_people .text-change:hover {
-    font-size: 0;
-    font-family: 'NexaBold', sans-serif;
-    color: #000;
-    -webkit-text-stroke: 2px #fff;
-}
+    .company_sub P {
+        font-family: 'NexaLight', sans-serif;
+        font-size: 40.5px;
+        font-weight: 300;
+        line-height: 1.22;
+        color: #fff;
+    }
 
 
-.company_people .text-change:hover::before {
-    font-size: 40.5px;
-    content: attr(data-hover);
-    color: #000;
-    -webkit-text-stroke: 2px #fff;
-}
-.company_people {
-    position: absolute;
-    bottom: 84px;
-    left: 20px;
-}
+    .company_people .text_hover {
+        font-family: 'NexaBold', sans-serif;
+        font-size: 40.5px;
+        line-height: 1.07;
+        color: #fefefe;
+        cursor: pointer;
+    }
 
-.team_list li {
-    font-family: 'NexaBold', sans-serif;
-    font-size: 126px;
-    font-weight: bold;
-    letter-spacing: -4.52px;
-    color: #fff;
-    -webkit-text-stroke: 2px #fff;
-}
-.company_wrapp {
-    position: absolute;
-    bottom: 69px;
-    left: 20px;
-}
+    .company_people .text_hover:hover {
+        font-family: 'NexaBold', sans-serif;
+        color: #000;
+        -webkit-text-stroke: 2px #fff;
+    }
 
-.company_footer .footer_title {
-    font-family: 'NexaBold', sans-serif;
-    font-size: 120px;
-    font-weight: bold;
-    letter-spacing: -4.56px;
-    color: #fff;
-    white-space: nowrap;
-    /* text-transform: uppercase; */
-}
+    .company_people .text-change {
+        font-family: 'NexaBold', sans-serif;
+        font-size: 40.5px;
+        line-height: 1.07;
+        color: #fefefe;
+        cursor: pointer;
+    }
 
-.landing-page__content img {
-    width: 200px;
-    height: auto;
-}
+    .company_people .text-change:hover {
+        font-size: 0;
+        font-family: 'NexaBold', sans-serif;
+        color: #000;
+        -webkit-text-stroke: 2px #fff;
+    }
+
+
+    .company_people .text-change:hover::before {
+        font-size: 40.5px;
+        content: attr(data-hover);
+        color: #000;
+        -webkit-text-stroke: 2px #fff;
+    }
+
+    .company_people {
+        position: absolute;
+        bottom: 84px;
+        left: 20px;
+    }
+
+    .team_list li {
+        font-family: 'NexaBold', sans-serif;
+        font-size: 126px;
+        font-weight: bold;
+        letter-spacing: -4.52px;
+        color: #fff;
+        -webkit-text-stroke: 2px #fff;
+    }
+
+    .company_wrapp {
+        position: absolute;
+        bottom: 69px;
+        left: 20px;
+    }
+
+    .company_footer .footer_title {
+        font-family: 'NexaBold', sans-serif;
+        font-size: 120px;
+        font-weight: bold;
+        letter-spacing: -4.56px;
+        color: #fff;
+        white-space: nowrap;
+        /* text-transform: uppercase; */
+    }
+
+    .landing-page__content img {
+        width: 200px;
+        height: auto;
+    }
 }
