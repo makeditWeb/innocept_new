@@ -127,7 +127,7 @@
                     </div>
 
                     <div id="tab2" class="content-container__content" > 
-                            <div class="work_category_slide">
+                        <div class="work_category_slide">
                             <div class="work_content_box">
                                 <a href="../home/work_page.html">
                                     <div class="work_slide_img">
@@ -178,7 +178,7 @@
                                     </div>
                                 </a>
                             </div>
-                            </div>
+                        </div>
 
                     </div>
 
@@ -238,7 +238,7 @@
                     </div>
 
                     <div id="tab4" class="content-container__content">   
-                            <div class="work_category_slide">
+                        <div class="work_category_slide">
                             <div class="work_content_box">
                                 <a href="../home/work_page.html">
                                     <div class="work_slide_img">
@@ -373,9 +373,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://unpkg.com/swup@3" defer></script>
+    <script src="https://unpkg.com/swup@3" ></script>
 
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js" defer></script>
     <script>
 
 
@@ -391,6 +391,8 @@
                 infinite: true,
                 autoplaySpeed: 3000,
                 autoplay: true,
+                vertical: false,
+                verticalSwiping:false,
                 responsive: [ // 반응형 웹 구현 옵션
 					{  
 						breakpoint: 1024, //화면 사이즈 960px
@@ -411,6 +413,29 @@
             });
         });
 
+            $(document).ready(function () {
+
+                const tabItem = document.querySelectorAll(".tab-container__item");
+                const tabContent = document.querySelectorAll(".content-container__content");
+
+                tabItem.forEach((item) => {
+                    item.addEventListener("click", tabHandler);
+                });
+
+                function tabHandler(event) {
+                    event.preventDefault();
+                    const tabTarget = event.currentTarget;
+                    const target = tabTarget.dataset.tab;
+                    tabItem.forEach((title) => {
+                        title.classList.remove("active");
+                    });
+                    tabContent.forEach((target) => {
+                        target.classList.remove("target");
+                    });
+                    document.querySelector("#" + target).classList.add("target");
+                    tabTarget.classList.add("active");
+                }
+            })
 
         const swup = new Swup({
             animationSelector: '[class*="swup-transition-"]'

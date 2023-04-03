@@ -758,15 +758,10 @@ nav {
     margin-right: 145px;
 }
 
-.work_content_box {
-    width: 600px;
-    height: 600px;
-    ;
-}
 
 .work_slide_img {
-    width: 450px;
-    height: 450px;
+    width: 450px!important;
+    height: 450px!important;
 }
 
 .work_content_box img {
@@ -789,10 +784,10 @@ nav {
 }
 
 .content-container__content {
-    display: none;
-  }
-  .content-container__content.target {
     display: block;
+  }
+  .content-container__content:not(.target) {
+    display: none;
   }
 
 .swup-transition-main-to-work {
