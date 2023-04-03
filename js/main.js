@@ -2,7 +2,7 @@
 const navbarToggleBtn = document.querySelector('.navbar_toggle_btn');
 const navbarMenuWrap = document.querySelector('.navbar_wrap');
 navbarToggleBtn.addEventListener('click', () => {
-  navbarMenuWrap.classList.toggle('open');
+    navbarMenuWrap.classList.toggle('open');
 });
 
 
@@ -149,7 +149,7 @@ function setFlowBanner2() {
 
 
 // 
-const spyEls = document.querySelectorAll('div.scroll-spy')
+const spyEls = document.querySelectorAll('.scroll-spy')
 // 요소들 반복 처리!
 spyEls.forEach(function (spyEl) {
     new ScrollMagic
@@ -189,3 +189,25 @@ jQuery(function ($) {
 });
 
 
+$(document).ready(function () {
+
+    const tabItem = document.querySelectorAll(".tab-container__item");
+    const tabContent = document.querySelectorAll(".content-container__content");
+
+    tabItem.forEach((item) => {
+        item.addEventListener("click", tabHandler);
+    });
+
+    function tabHandler(item) {
+        const tabTarget = item.currentTarget;
+        const target = tabTarget.dataset.tab;
+        tabItem.forEach((title) => {
+            title.classList.remove("active");
+        });
+        tabContent.forEach((target) => {
+            target.classList.remove("target");
+        });
+        document.querySelector("#" + target).classList.add("target");
+        tabTarget.classList.add("active");
+    }
+})
