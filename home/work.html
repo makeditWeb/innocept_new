@@ -379,31 +379,10 @@
     <script>
 
 
-$(document).ready(function(){
-	
-    const tabItem = document.querySelectorAll(".tab-container__item");
-    const tabContent = document.querySelectorAll(".content-container__content");
-
-    tabItem.forEach((item) => {
-        item.addEventListener("click", tabHandler);
-    });
-
-    function tabHandler(item) {
-        const tabTarget = item.currentTarget;
-        const target = tabTarget.dataset.tab;
-        tabItem.forEach((title) => {
-            title.classList.remove("active");
-        });
-        tabContent.forEach((target) => {
-            target.classList.remove("target");
-        });
-        document.querySelector("#" + target).classList.add("target");
-        tabTarget.classList.add("active");
-    }
-})
 
         $(document).ready(function () {
             $('.work_category_slide').slick({
+                slidesToShow: 3,
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 arrows: false,
@@ -424,6 +403,7 @@ $(document).ready(function(){
 						breakpoint: 768, //화면 사이즈 768px
 						settings: {	
 							//위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+							slidesToShow:1, 
 							slidesToShow:1, 
 						} 
 					}

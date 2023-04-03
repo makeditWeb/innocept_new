@@ -362,55 +362,6 @@ navbarMenu.addEventListener('click', (event) => {
 
 
 
-$(window).on('load', function () {
-    setFlowBanner8();
-})
-
-function setFlowBanner8() {
-    const $wrap8 = $('.flow_banner_list');
-    const $list8 = $('.flow_banner_list .partners_list');
-    let wrapWidth8 = ''; //$wrap의 가로 크기
-    let listWidth8 = ''; //$list의 가로 크기
-    const speed8 = 92; //1초에 몇픽셀 이동하는지 설정
-
-    //리스트 복제
-    let $clone8 = $list8.clone();
-    $wrap8.append($clone8);
-    flowBannerAct8()
-
-    //반응형 :: 디바이스가 변경 될 때마다 배너 롤링 초기화
-    let oldWChk = window.innerWidth > 1279 ? 'pc' : window.innerWidth > 767 ? 'ta' : 'mo';
-    $(window).on('resize', function () {
-        let newWChk = window.innerWidth > 1279 ? 'pc' : window.innerWidth > 767 ? 'ta' : 'mo';
-        if (newWChk != oldWChk) {
-            oldWChk = newWChk;
-            flowBannerAct8();
-        }
-    });
-
-    //배너 실행 함수
-    function flowBannerAct8() {
-        //배너 롤링 초기화
-        if (wrapWidth8 != '') {
-            $wrap8.find('.partners_list').css({ 'animation': 'none' });
-            $wrap8.find('.partners_list').slice(2).remove();
-        }
-        wrapWidth8 = $wrap8.width();
-        listWidth8 = $list8.width();
-
-        //무한 반복을 위해 리스트를 복제 후 배너에 추가
-        if (listWidth8 < wrapWidth8) {
-            const listCount8 = Math.ceil(wrapWidth8 * 2 / listWidth8);
-            for (let i = 2; i < listCount8; i++) {
-                $clone8 = $clone8.clone();
-                $wrap8.append($clone8);
-            }
-        }
-        $wrap8.find('.partners_list').css({ 'animation': `${listWidth8 / speed8}s linear infinite flowRolling1` });
-    }
-}
-
-
 
 const swup = new Swup({
       plugins: [new SwupSlideTheme()]

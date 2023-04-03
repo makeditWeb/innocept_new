@@ -301,6 +301,7 @@ nav {
 
 
 .bg-white .navbar_toggle_btn {
+.bg-white .navbar_toggle_btn {
     color: #000;
 }
 
@@ -313,6 +314,7 @@ nav {
   } */
 
 .navbar_toggle_btn {
+.navbar_toggle_btn {
     position: absolute;
     right: 32px;
     color: #fff;
@@ -320,6 +322,7 @@ nav {
     background: transparent;
     border: none;
     top: 15px;
+}
 }
 
 
@@ -412,8 +415,6 @@ nav {
 
 .flow_banner .list,
 .flow_banner1 .motion_rigth,
-.flow_banner_list .partners_list,
-.flow_banner .partners_list,
 .marquee_company .company_list,
 .team_banner .team_list {
     display: flex;
@@ -1002,6 +1003,7 @@ nav {
 }
 
 
+.company_team_bg {}
 
 .team-inner {
     display: flex;
@@ -2278,14 +2280,14 @@ footer p {
         width: 70%;
     }
 
-    .tab-container .tab-container__item {
-        font-family: 'NexaLight', sans-serif;
-        color: #fffefe;
-        display: block;
-        font-size: 16px;
-        padding: 0px 20px 0px 0px;
-        line-height: 34px;
-    }
+.work_content-wrap .work_content-list {
+    font-family: 'NexaLight', sans-serif;
+    color: #fffefe;
+    display: block;
+    font-size: 16px;
+    padding: 0px 20px 0px 0px;
+    line-height: 34px;
+}
 
 
 
