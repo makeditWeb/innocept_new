@@ -130,7 +130,7 @@
                 <section class="section partners bg-white height_max " data-page="4">
                     <div class="wrapp_inner">
                         <div class="flow_banner_list">
-                            <ul class="partners_list">
+                            <ul class="partners_list ">
                                 <li>PARTNERS</li>
                                 <li class="text-color">PARTNERS</li>
                                 <li>PARTNERS</li>
@@ -141,17 +141,17 @@
                 </section>
 
                 <section class="section partners_logo bg-white height_max"  data-page="5">
-                    <div class="partners_wrap">
-                        <div class="partners_title">
+                    <div class="partners_wrap scroll-spy">
+                        <div class="partners_title back-to-position to-left delay-0">
                             PARTNERS
                         </div>
                         <div class="partners_display">
                             <div class="partners_side">
-                                <p>Bringing</p>
-                                <p>brand</p>
-                                <p class="p_span">and</p>
-                                <p>clients</p>
-                                <p>together</p>
+                                <p class="back-to-position to-left delay-1">Bringing</p>
+                                <p class="back-to-position to-left delay-2">brand</p>
+                                <p class="p_span back-to-position to-left delay-3">and</p>
+                                <p class="back-to-position to-left delay-4">clients</p>
+                                <p class="back-to-position to-left delay-5">together</p>
                             </div>
                             <div class="partners_logo_contents">
                                 <div class="partners_logo_img">
@@ -360,6 +360,55 @@ navbarMenu.addEventListener('click', (event) => {
     scrollIntoView(link);
 });
 
+
+
+$(window).on('load', function () {
+    setFlowBanner8();
+})
+
+function setFlowBanner8() {
+    const $wrap8 = $('.flow_banner_list');
+    const $list8 = $('.flow_banner_list .partners_list');
+    let wrapWidth8 = ''; //$wrap의 가로 크기
+    let listWidth8 = ''; //$list의 가로 크기
+    const speed8 = 92; //1초에 몇픽셀 이동하는지 설정
+
+    //리스트 복제
+    let $clone8 = $list8.clone();
+    $wrap8.append($clone8);
+    flowBannerAct8()
+
+    //반응형 :: 디바이스가 변경 될 때마다 배너 롤링 초기화
+    let oldWChk = window.innerWidth > 1279 ? 'pc' : window.innerWidth > 767 ? 'ta' : 'mo';
+    $(window).on('resize', function () {
+        let newWChk = window.innerWidth > 1279 ? 'pc' : window.innerWidth > 767 ? 'ta' : 'mo';
+        if (newWChk != oldWChk) {
+            oldWChk = newWChk;
+            flowBannerAct8();
+        }
+    });
+
+    //배너 실행 함수
+    function flowBannerAct8() {
+        //배너 롤링 초기화
+        if (wrapWidth8 != '') {
+            $wrap8.find('.partners_list').css({ 'animation': 'none' });
+            $wrap8.find('.partners_list').slice(2).remove();
+        }
+        wrapWidth8 = $wrap8.width();
+        listWidth8 = $list8.width();
+
+        //무한 반복을 위해 리스트를 복제 후 배너에 추가
+        if (listWidth8 < wrapWidth8) {
+            const listCount8 = Math.ceil(wrapWidth8 * 2 / listWidth8);
+            for (let i = 2; i < listCount8; i++) {
+                $clone8 = $clone8.clone();
+                $wrap8.append($clone8);
+            }
+        }
+        $wrap8.find('.partners_list').css({ 'animation': `${listWidth8 / speed8}s linear infinite flowRolling1` });
+    }
+}
 
 
 
