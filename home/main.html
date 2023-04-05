@@ -33,7 +33,7 @@
         </div>
     </div> -->
 
-        <div class="main wrapper">
+        <div id="fullpage" class="main wrapper">
 
             <nav class="navbar">
                 <div class="nav_logo">
@@ -58,7 +58,7 @@
             </nav>
 
             <main id="main">
-                <section class="section main_top bg-black" >
+                <section class="section main_top bg-black"  data-page="1">
                     <div class="main_top_content">
                         <div class="line">
                             <h2>WE CREATE</h2>
@@ -75,7 +75,7 @@
                     </div>
                 </section>
 
-                <section class="section sticky-cont bg-black slide-text-cont" data-animation="work">
+                <section class="section sticky-cont bg-black slide-text-cont" data-page="2" data-animation="work">
                     <div class="sticky-box">
                         <!-- <div class="motion_content"> -->
                             <!-- <div id="expandable" class="marquee"> -->
@@ -92,7 +92,7 @@
                     </div>
                 </section>
 
-                <section id="work" class="section main_work_slide bg-black height_max ">
+                <section id="work" class="section main_work_slide bg-black height_max " data-page="3">
                     <div class="center-slider">
                         <div class="navbar_slide_content">
                             <a href="../home/work.html" data-swup class="swup-transition-main-to-work">
@@ -128,7 +128,7 @@
                 </section>
 
 
-                <section class="section partners bg-white sticky-cont slide-text-cont2" data-animation="partners">
+                <section class="section partners bg-white sticky-cont slide-text-cont2" data-page="4" data-animation="partners">
                     <div class="sticky-box">
                         <div class="flow_banner_list scale-text">
                             <ul class="partners_list ">
@@ -141,7 +141,7 @@
                     </div>
                 </section>
 
-                <section class="section partners_logo bg-white height_max" >
+                <section class="section partners_logo bg-white height_max"  data-page="5">
                     <div class="partners_wrap scroll-spy">
                         <div class="partners_title back-to-position to-left delay-0">
                             PARTNERS
@@ -251,7 +251,7 @@
                     </div>
                 </section>
 
-                <section class="section footer bg-black height_max">
+                <section class="section footer bg-black height_max" data-page="6">
                     <div class="wrapp_inner">
                         <div class="flow_banner">
                             <ul class="list">
@@ -300,10 +300,29 @@
     <!-- slick js -->
     <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://unpkg.com/swup@3" ></script>
-    <script src="../js/main.js" ></script>
-    <script src="../js/navbar.js"></script>
+    <script src="../js/main.js" defer></script>
 
     <script>
+
+
+// scroll section 
+
+
+
+
+// $(document).ready(function () {
+//     document.querySelector('.logo').style.display = 'block';
+//     setTimeout(function () {
+//         document.querySelector('.loading-screen').style.display = 'none';
+//         document.querySelector('.logo').style.display = 'none';
+//         document.querySelector('.navbar').style.display = 'flex';
+//         document.querySelector('#main').style.display = 'block'; // 메인 화면 보이도록 설정
+//     }, 4000); // 3초 후에 loading screen 제거
+
+//     setFlowBanner();
+// });
+
+
 
         $(document).ready(function () {
             $('.center-slider').slick({

@@ -34,7 +34,6 @@ body {
 section {
     width: 100vw;
     min-height: 100vh;
-    height: 100vh;
     position: relative;
 }
 
@@ -96,7 +95,7 @@ body {
 
 
 .height_max {
-    /* height: 972px; */
+    height: 972px;
     position: relative;
 }
 
@@ -207,7 +206,7 @@ nav {
     top: -100px;
     left: 0;
     width: 100%;
-    padding: 30px 70px !important;
+    padding: 30px 70px!important;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -264,6 +263,7 @@ nav {
     margin-right: 0;
 }
 
+
 .navbar .navbar_item a {
     font-family: 'NexaLight', sans-serif;
     color: #fff;
@@ -275,7 +275,13 @@ nav {
     display: flex;
 }
 
+
+
+
+
 /* White Logo */
+
+
 .bg-white .black_logo {
     display: block;
 }
@@ -283,7 +289,6 @@ nav {
 .bg-white .white_logo {
     display: none;
 }
-
 
 /* Black Logo */
 .black_logo {
@@ -300,19 +305,30 @@ nav {
 
 .navbar.bg-white {
     color: #000;
+    background-color: #fff;
 }
 
 .navbar.bg-white a {
     color: #000;
 }
 
+
 .navbar-bg-black {
     color: #fff;
 }
 
+
 .bg-white .navbar_toggle_btn {
     color: #000;
 }
+
+/* .navbar.black .navbar_item{
+    color: black;
+  }
+
+  .navbar.black .navbar_item a{
+    color: black;
+  } */
 
 .navbar_toggle_btn {
     position: absolute;
@@ -321,37 +337,10 @@ nav {
     display: none;
     background: transparent;
     border: none;
-    top: 27px;
+    top: 15px;
 }
 
-/* 초기 상태 */
-nav.black_bg {
-    background-color: transparent;
-    color: #fff;
-  }
-  
-  nav.black_bg .nav_logo img.white_logo {
-    display: inline-block;
-  }
-  
-  nav.black_bg .nav_logo img.black_logo {
-    display: none;
-  }
-  
-  /* bg-white 클래스가 추가된 경우 */
-  nav.white_bg {
-    background-color: #fff;
-    color: #000;
-  }
-  
-  nav.white_bg .nav_logo img.white_logo {
-    display: none;
-  }
-  
-  nav.white_bg .nav_logo img.black_logo {
-    display: inline-block;
-  }
-  
+
 
 /* ======================================main============================*/
 .main_top {
@@ -505,7 +494,7 @@ nav.black_bg {
     transition: font-size 0.5s; */
 }
 
-#expandable .flow_banner .list li {
+#expandable .flow_banner .list li{
     font-weight: bold;
     letter-spacing: -4.52px;
     -webkit-text-stroke: 2px #fff;
@@ -755,22 +744,21 @@ nav.black_bg {
     width: 100%;
 }
 
-.partaner_logo_display {
+.partaner_logo_display{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:space-between;
     margin-bottom: 1.5rem;
     flex-wrap: wrap;
 }
 
-.partaner_logo_display:last-child {
+.partaner_logo_display:last-child{
     justify-content: flex-start;
 }
 
-.partaner_logo_display:last-child .partners_logo_img:first-child {
+.partaner_logo_display:last-child .partners_logo_img:first-child{
     margin-right: 1.5rem;
 }
-
 /* ==================================WORK================================== */
 
 .work_wrap {
@@ -787,7 +775,7 @@ nav.black_bg {
     display: flex;
 }
 
-.tab-container .tab-container__item {
+.tab-container .tab-container__item{
     position: relative;
     margin-right: 1rem;
     cursor: pointer;
@@ -803,7 +791,7 @@ nav.black_bg {
     text-decoration: none;
 }
 
-.tab-container .tab-container__item.active .tab-container__item--title {
+.tab-container .tab-container__item.active .tab-container__item--title{
     font-weight: bold;
 }
 
@@ -872,12 +860,11 @@ nav.black_bg {
 
 .content-container__content {
     display: none;
-}
-
-.content-container__content.target {
+  }
+  .content-container__content.target {
     display: block;
-}
-
+  }
+  
 
 
 
@@ -1181,18 +1168,14 @@ nav.black_bg {
     display: none;
 }
 
-.company_team_bg .team-inner {
+  .company_team_bg .team-inner {
     display: none;
-}
+  }
 
 
-.design_team,
-.contents_team,
-.operations_team,
-.develop_team {
+  .design_team,.contents_team,.operations_team,.develop_team {
     display: inline-block;
-}
-
+  }
 /* ===========================work_page============================ */
 
 .work_project {
@@ -1419,8 +1402,8 @@ nav.black_bg {
     color: #fff;
     font-size: 29.5px;
     line-height: 49px;
-    width: 100%;
-    padding-right: 7%;
+    width:100%;
+    padding-right:7%;
 }
 
 
@@ -1437,7 +1420,7 @@ nav.black_bg {
 
 .contact_s02 form .contact ul li label {
     /* width: 30%; */
-    width: 24%;
+    width:24%;
 }
 
 .contact_s02 form .contact ul li input {
@@ -1452,7 +1435,7 @@ nav.black_bg {
     text-align: left;
 }
 
-.contact_s02 form .contact ul li input::placeholder {
+.contact_s02 form .contact ul li input::placeholder{
     font-size: 18PX;
 }
 
@@ -1485,7 +1468,7 @@ nav.black_bg {
 
 
 footer {
-    padding: 76px 0px 0px 78px !important;
+    padding: 76px 0px 0px 78px!important;
 }
 
 footer .footer_nav .list a {
@@ -1890,7 +1873,7 @@ footer p {
         top: -100px;
         left: 0;
         width: 100%;
-        padding: 0!important;
+        padding: 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
