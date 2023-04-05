@@ -25,7 +25,7 @@
                 </a>
             </div>
             <ul class="navbar_wrap">
-                <li class="navbar_item"><a href="./main.html">info@innocept.co.kr</a></li>
+                <li class="navbar_item"><a href="./main.html" >info@innocept.co.kr</a></li>
                 <li class="navbar_item"><a href="./company.html">COMPANY</a></li>
                 <li class="navbar_item"><a href="./work.html">WORK</a></li>
                 <li class="navbar_item"><a href="./contact.html">CONTACT</a></li>
@@ -60,14 +60,14 @@
 
             </section>
 
-            <section class="section height_max bg-black " data-page="2">
-                <div class="motion_content">
-                    <div class="team_banner">
+            <section class="section sticky-cont bg-black slide-text-cont3" data-page="2" data-animation="team">
+                <div class="sticky-box">
+                    <div class="team_banner scale-text">
                         <ul class="team_list">
-                            <li>TEAM</li>
-                            <li class="text-stroke">TEAM</li>
-                            <li>TEAM</li>
-                            <li class="text-stroke">TEAM</li>
+                            <li><span>TEAM</span></li>
+                            <li class="text-stroke"><span>TEAM</span></li>
+                            <li><span>TEAM</span></li>
+                            <li class="text-stroke"><span>TEAM</span></li>
                         </ul>
                     </div>
                 </div>
@@ -338,17 +338,17 @@
 
 
                 <div class="company_people scroll-spy">
-                    <div class="design_team back-to-position to-left delay-0">
-                        <h2 class="text_hover ">DESIGN</h2>
+                    <div class=" back-to-position to-left delay-0">
+                        <h2 class="text_hover design_team ">DESIGN</h2>
                     </div>
-                    <div class="contents_team back-to-position to-left delay-1">
-                        <h2 class="text_hover ">CONTENTS</h2>
+                    <div class=" back-to-position to-left delay-1">
+                        <h2 class="text_hover contents_team">CONTENTS</h2>
                     </div>
-                    <div class="operations_team back-to-position to-left delay-2">
-                        <h2 class="text_hover ">OPERATIONS</h2>
+                    <div class=" back-to-position to-left delay-2">
+                        <h2 class="text_hover operations_team">OPERATIONS</h2>
                     </div>
-                    <div class="develop_team back-to-position to-left delay-3">
-                        <h2 class="text-change" data-hover="NEXT PAGE Inc.">DEVELOPMENT</h2>
+                    <div class=" back-to-position to-left delay-3">
+                        <h2 class="text-change develop_team" data-hover="NEXT PAGE Inc.">DEVELOPMENT</h2>
                     </div>
                 </div>
             </section>
@@ -358,7 +358,7 @@
                     <div class="company_footer">
                         <div class="marquee_company">
                             <ul class="company_list">
-                                <li class="footer_title">INNOCEPT DEVELOPMENT Co., Ltd.</li>
+                                <li class="footer_title text-stroke">INNOCEPT DEVELOPMENT Co., Ltd.</li>
                                 <li class="footer_title text-stroke">INNOCEPT DEVELOPMENT Co., Ltd.</li>
                             </ul>
 
@@ -452,7 +452,8 @@
 
         // text slide
         $(window).on('load', function () {
-            setFlowBanner4();
+            // setFlowBanner4();
+            setScrollBanner($('.slide-text-cont3'));
         })
 
         function setFlowBanner4() {

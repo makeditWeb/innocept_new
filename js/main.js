@@ -1,4 +1,6 @@
 
+'use strict';
+
 const navbarToggleBtn = document.querySelector('.navbar_toggle_btn');
 const navbarMenuWrap = document.querySelector('.navbar_wrap');
 navbarToggleBtn.addEventListener('click', () => {
@@ -12,87 +14,89 @@ window.addEventListener('load', function () {
 });
 
 
-// fullpage js
-$(document).ready(function () {
-    $('#fullpage').fullpage({
-        scrollBar: true
-    });
-});
 
 
-// 스크롤시 navbar 색상 변경 및 logo 이미지 변경
-window.addEventListener('scroll', function () {
-    var navbar = document.querySelector('nav.navbar');
-    var sections = document.querySelectorAll('section');
-    var currentSectionIndex = 0;
 
-    for (var i = 0; i < sections.length; i++) {
-        if (sections[i].offsetTop - navbar.offsetHeight <= window.pageYOffset) {
-            currentSectionIndex = i;
+
+
+
+
+
+
+function setScrollBanner(el) {
+    $('body').scroll(function () {
+        const $body = $('body');
+        const $tag = $(el);
+        let scrollTop = $body.scrollTop();
+        let tagHeight = $tag.height();
+        let tagTop = $tag.position().top;
+        let percent = Math.floor((scrollTop - tagTop) / tagHeight * 100);
+
+        if (0 <= percent && percent <= 50) {
+            let size = 3 - percent * .04;
+
+            $tag.find('.scale-text').css('transform', 'scale(' + size + ')');
+        } else if (50 <= percent) {
+            if (!$tag.hasClass('running')) {
+                $tag.addClass('running');
+                if ($tag.data('animation') == 'work') setFlowBanner($tag.find('.flow_banner'));
+                else if ($tag.data('animation') == 'partners') setFlowBanner8();
+                else if ($tag.data('animation') == 'team') setFlowBanner4();
+            }
         }
-    }
-
-    var currentSection = sections[currentSectionIndex];
-
-    if (currentSection.classList.contains('bg-black')) {
-        navbar.classList.remove('bg-white');
-        // 로고 이미지를 바꾸는 코드 추가
-    } else {
-        navbar.classList.add('bg-white');
-        // 로고 이미지를 바꾸는 코드 추가
-    }
-});
+    });
+}
 
 
 // text slide
 $(document).ready(function () {
-    setFlowBanner();
+    // setFlowBanner();
 });
 
-function setFlowBanner() {
-    $('.flow_banner').each(function () {
-        const $wrap = $(this);
-        const $list = $wrap.find('.list');
-        let wrapWidth = ''; //$wrap의 가로 크기
-        let listWidth = ''; //$list의 가로 크기
-        const speed = 92; //1초에 몇픽셀 이동하는지 설정
+function setFlowBanner(el) {
+    // $('.flow_banner').each(function () {
+    const $wrap = $(el);
+    const $list = $wrap.find('.list');
+    let wrapWidth = ''; //$wrap의 가로 크기
+    let listWidth = ''; //$list의 가로 크기
+    const speed = 92; //1초에 몇픽셀 이동하는지 설정
 
-        //리스트 복제
-        let $clone = $list.clone();
-        $wrap.append($clone);
-        flowBannerAct();
+    //리스트 복제
+    let $clone = $list.clone();
+    $wrap.append($clone);
+    flowBannerAct();
 
-        //반응형 :: 디바이스가 변경 될 때마다 배너 롤링 초기화
-        let oldWChk = window.innerWidth > 1279 ? 'pc' : window.innerWidth > 767 ? 'ta' : 'mo';
-        $(window).on('resize', function () {
-            let newWChk = window.innerWidth > 1279 ? 'pc' : window.innerWidth > 767 ? 'ta' : 'mo';
-            if (newWChk != oldWChk) {
-                oldWChk = newWChk;
-                flowBannerAct();
-            }
-        });
-
-        //배너 실행 함수
-        function flowBannerAct() {
-            //배너 롤링 초기화
-            if (wrapWidth != '') {
-                $wrap.find('.list').css({ 'animation': 'none' });
-                $wrap.find('.list').slice(2).remove();
-            }
-            wrapWidth = $wrap.width();
-            listWidth = $list.width();
-
-            //무한 반복을 위해 리스트를 복제 후 배너에 추가
-            if (listWidth < wrapWidth) {
-                const listCount = Math.ceil(wrapWidth * 2 / listWidth);
-                for (let i = 2; i < listCount; i++) {
-                    $clone = $clone.clone();
-                    $wrap.append($clone);
-                }
-            }
-            $wrap.find('.list').css({ 'animation': `${listWidth / speed}s linear infinite flowRolling` });
+    //반응형 :: 디바이스가 변경 될 때마다 배너 롤링 초기화
+    let oldWChk = window.innerWidth > 1279 ? 'pc' : window.innerWidth > 767 ? 'ta' : 'mo';
+    $(window).on('resize', function () {
+        let newWChk = window.innerWidth > 1279 ? 'pc' : window.innerWidth > 767 ? 'ta' : 'mo';
+        if (newWChk != oldWChk) {
+            oldWChk = newWChk;
+            flowBannerAct();
         }
     });
+
+    //배너 실행 함수
+    function flowBannerAct() {
+        //배너 롤링 초기화
+        if (wrapWidth != '') {
+            $wrap.find('.list').css({ 'animation': 'none' });
+            $wrap.find('.list').slice(2).remove();
+        }
+        wrapWidth = $wrap.width();
+        listWidth = $list.width();
+
+        //무한 반복을 위해 리스트를 복제 후 배너에 추가
+        if (listWidth < wrapWidth) {
+            const listCount = Math.ceil(wrapWidth * 2 / listWidth);
+            for (let i = 2; i < listCount; i++) {
+                $clone = $clone.clone();
+                $wrap.append($clone);
+            }
+        }
+        $wrap.find('.list').css({ 'animation': `${listWidth / speed}s linear infinite flowRolling` });
+    }
+    // });
 }
 
 
@@ -187,6 +191,5 @@ jQuery(function ($) {
         window.location = linkLocation;
     }
 });
-
 
 
